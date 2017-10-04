@@ -123,13 +123,13 @@ $this->title = 'My Yii Application';
             <div class="image" data-type="background" data-speed="5"></div>
             <div class="stuff" data-type="content">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card firstCard">
+                    <div class="col-lg-4 no-padding">
+                        <div class="card wabbi-card">
 
                             <!--Card image-->
                             <img src="images/logo-wabi.gif">
                             <!--Card content-->
-                            <div class="card-body card-body-custom">
+                            <div class="card-body card-body-custom-1">
                                 <p class="card-text" style="font-size: 15px">Un website este ca o carte de vizita.
                                     Prezenta online a unei companii este foarte importanta pentru dezvoltarea
                                     parteneriatelor si sporirea increderii in serviciile oferite.</p>
@@ -153,6 +153,7 @@ $this->title = 'My Yii Application';
 
     <div class="at-twitter"><a href="//twitter.com/hendrysadrak" target="_blank">@hendrysadrak</a></div>
 </div>
+
 <script>// Hide Header on on scroll down
     var didScroll;
     var lastScrollTop = 0;

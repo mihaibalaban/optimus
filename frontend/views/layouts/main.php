@@ -37,6 +37,7 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index'], 'options'=>['class'=>' btn btn-2']],
+        ['label' => 'Servicii', 'url' => ['/site/services'], 'options'=>['class'=>' btn btn-2']],
         ['label' => 'About', 'url' => ['/site/about'], 'options'=>['class'=>' btn btn-2']],
         ['label' => 'Contact', 'url' => ['/site/contact'], 'options'=>['class'=>' btn btn-2']],
     ];
