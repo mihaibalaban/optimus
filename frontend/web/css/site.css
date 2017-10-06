@@ -3,6 +3,10 @@ body {
     height: 100%;
 }
 
+.contentPadding{
+    margin-left: 50px;
+    margin-right: 50px;
+}
 .wrap {
     min-height: 100%;
     height: auto;
@@ -228,7 +232,7 @@ a.desc:after {
     justify-content: center;
     text-align: center;
     z-index: 1000;
-    color: #f5f5f5;
+    color: black;
     margin: 0 auto;
     font-size: 26px;
 }
@@ -297,6 +301,10 @@ a:hover, a:focus {
     margin: 0px 10px 10px 10px;
 }
 
+.whiteCollor {
+    color: #f5f5f5;
+}
+
 .marginator {
     margin-left: 10px;
     margin-bottom: 10px;
@@ -306,6 +314,7 @@ a:hover, a:focus {
     border-radius: 20px;
     margin-bottom: 15px;
     margin-top: 8px;
+    width: 150px !important;
 }
 
 .homeOtSol {
@@ -321,20 +330,20 @@ a:hover, a:focus {
 .third-content-b {
     /*background-image: url('../images/wconnecta.jpg');*/
     /*width: 100%;*/
-    height: 100%;
-    background-size: cover;
-    z-index: -1;
+    /*height: 100%;*/
+    /*background-size: cover;*/
+    /*z-index: -1;*/
 }
 
 .wconecta-image {
-    background-image: url('../images/wconnecta.jpg');
-    background-image: url(../images/wconnecta.jpg);
-    height: 100%;
     background-size: cover;
     margin-left: -244px;
+    height: -webkit-fill-available;
 
 }
-
+.paddingBigElements{
+    margin-top: 60px;
+}
 .stufff {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -365,18 +374,14 @@ a:hover, a:focus {
 
     .third-content-a {
         background-color: #9e0b0f;
-        /*width: 66%;*/
-        height: 200px;
+        height: -webkit-fill-available;
         border-top-right-radius: 30em;
         border-bottom-right-radius: 30em;
-        height: 100%;
-        /*position: absolute;*/
+
     }
 
     .third-content-b {
-        /*background-image: url('../images/wconnecta.jpg');*/
-        height: 100%;
-        background-size: cover;
+        height: -webkit-fill-available;
         z-index: -1;
     }
 
@@ -454,11 +459,13 @@ a:hover, a:focus {
 
 .btn-2 {
     letter-spacing: 0;
+    margin:inherit;
+    font-size: 14px;
 }
 
 .btn-2:hover,
 .btn-2:active {
-    letter-spacing: 5px;
+    /*letter-spacing: 5px;*/
 }
 
 .btn-2:after,
@@ -483,13 +490,13 @@ a:hover, a:focus {
     border-color: #fff;
     -webkit-transition: width 350ms ease-in-out;
     transition: width 350ms ease-in-out;
-    width: 70%;
+    width: 100%;
 }
 
 .btn-2:hover:before {
     bottom: auto;
     top: 0;
-    width: 70%;
+    width: 100%;
 }
 
 .no-padding {
@@ -528,7 +535,7 @@ a:hover, a:focus {
     color: white;
     font-size: 15px;
     left: 60%;
-    top: 20%;
+    top: 16%;
     width: 30%;
 }
 
@@ -538,7 +545,7 @@ a:hover, a:focus {
     color: white;
     font-size: 15px;
     left: 60%;
-    top: 10%;
+    top: 14%;
 }
 
 #text2 {
@@ -547,8 +554,8 @@ a:hover, a:focus {
     color: white;
     font-size: 15px;
     left: 60%;
-    top: 30%;
-    width: 30%;
+    top: 34%;
+    width: 35%;
 }
 
 #image2 {
@@ -557,9 +564,46 @@ a:hover, a:focus {
     color: white;
     font-size: 15px;
     left: 60%;
-    top: 10%;
+    top: 33%;
 }
 
+#text3 {
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    left: 60%;
+    top: 78%;
+    width: 30%;
+}
+
+#image3 {
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    left: 60%;
+    top: 77%;
+}
+
+#text4 {
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    left: 60%;
+    top: 94%;
+    width: 30%;
+}
+
+#image4 {
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    left: 60%;
+    top: 93%;
+}
 .nav-tabs > li {
     text-align: center;
     display: inline-block;
@@ -573,6 +617,12 @@ a:hover, a:focus {
 .card-body-custom-second {
     background-color: #9e0b0f;
     padding: 20px;
+}
+
+.card-body-custom-third {
+    background-color: #9e0b0f;
+    height: 350px;
+
 }
 
 #circle {
@@ -597,10 +647,6 @@ p {
     height: 154vh !important;
 }
 
-.servicesSection3 {
-    height: 62vh !important;
-}
-
 .padding {
     padding-top: 23px;
 }
@@ -621,19 +667,46 @@ p {
     padding: 30px 0;
 }
 
-.servicesSection4 {
-    height: 85vh !important;
-
-}
-
 .sixElements {
     margin-left: -121px;
     margin-top: 93px;
 }
 
-.elementFromSix{
+.elementFromSix {
+    background-color: #9e0b0f;
+    padding: 8px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #f5f5f5;
+    min-height: 146px;
+}
+
+.container section .image {
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 500;
+    background-color: #f5f5f5;
+}
+
+.secondSectionPadding {
+    padding-top: 20px;
+}
+
+.demoWbutton {
+    width: 285px;
+    background-color: #9e0b0f;
+    border-radius: 42px;
+}
+
+.titleQuestionner{
     background-color: #9e0b0f;
     padding: 17px;
-    margin: 20px;
-    width: 260px;
+}
+.titleSection5{
+    margin: 0px;
+    font-size: 25px;
+    color: #f5f5f5;
 }
