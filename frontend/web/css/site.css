@@ -1,12 +1,20 @@
 html,
 body {
     height: 100%;
+    background-color: #f5f5f5;
+    font-family: roboto;
 }
 
-.contentPadding{
+.textFooter {
+    padding: 10px;
+    color: white;
+}
+
+.contentPadding {
     margin-left: 50px;
     margin-right: 50px;
 }
+
 .wrap {
     min-height: 100%;
     height: auto;
@@ -26,10 +34,23 @@ body {
 }
 
 .footer {
-    height: 60px;
-    background-color: #f5f5f5;
+    background-color: white;
     border-top: 1px solid #ddd;
     padding-top: 20px;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.footerFooter {
+    height: 40px;
+    background-color: #9e0b0f;
+}
+
+.footerImage {
+    height: 120px;
 }
 
 .jumbotron {
@@ -52,7 +73,7 @@ a.asc:after, a.desc:after {
     position: relative;
     top: 1px;
     display: inline-block;
-    font-family: 'Glyphicons Halflings';
+    font-family: 'roboto';
     font-style: normal;
     font-weight: normal;
     line-height: 1;
@@ -90,6 +111,11 @@ a.desc:after {
 .grid-view .filters input,
 .grid-view .filters select {
     min-width: 50px;
+}
+
+.footerLogos {
+    width: 40px;
+    margin-right: 14px;
 }
 
 .hint-block {
@@ -232,7 +258,7 @@ a.desc:after {
     justify-content: center;
     text-align: center;
     z-index: 1000;
-    color: black;
+    color: #f5f5f5;
     margin: 0 auto;
     font-size: 26px;
 }
@@ -299,6 +325,8 @@ a:hover, a:focus {
 .card-body-custom {
     text-align: left;
     margin: 0px 10px 10px 10px;
+    color: white;
+    padding-bottom: 20px;
 }
 
 .whiteCollor {
@@ -339,11 +367,24 @@ a:hover, a:focus {
     background-size: cover;
     margin-left: -244px;
     height: -webkit-fill-available;
+    width: calc(100% + 244px);
 
 }
-.paddingBigElements{
-    margin-top: 60px;
+
+.paddingBigElements {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+.paddingLeft {
+    padding-left: 20px;
+}
+
+.overSection {
+    margin-top: -176px;
+    z-index: 999;
+}
+
 .stufff {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -387,6 +428,28 @@ a:hover, a:focus {
 
 }
 
+@media only screen and (max-width: 1200px) {
+
+    #image {
+        top: 11% !important;
+    }
+
+    #text {
+        top: 11% !important;
+        background: rgba(16, 16, 16, 0.8);
+        /* opacity: 0.8; */
+        padding: 10px;
+        /* border-radius: 17px; */
+        left: 54%;
+        z-index: 100;
+        position: absolute;
+        color: white;
+        font-size: 15px;
+        /* left: 40%; */
+        width: 38%;
+    }
+}
+
 .col-md-12 > .third-content-a {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -405,6 +468,10 @@ a:hover, a:focus {
     background-image: url(../images/wabi.jpg);
     height: 500px;
     background-size: cover;
+}
+
+.wabbi-card {
+    color: #f5f5f5;
 }
 
 .hideMenu {
@@ -459,7 +526,7 @@ a:hover, a:focus {
 
 .btn-2 {
     letter-spacing: 0;
-    margin:inherit;
+    margin: inherit;
     font-size: 14px;
 }
 
@@ -533,9 +600,9 @@ a:hover, a:focus {
     z-index: 100;
     position: absolute;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     left: 60%;
-    top: 16%;
+    top: 18%;
     width: 30%;
 }
 
@@ -543,18 +610,18 @@ a:hover, a:focus {
     z-index: 100;
     position: absolute;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     left: 60%;
-    top: 14%;
+    top: 16%;
 }
 
 #text2 {
     z-index: 100;
     position: absolute;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     left: 60%;
-    top: 34%;
+    top: 39%;
     width: 35%;
 }
 
@@ -562,35 +629,40 @@ a:hover, a:focus {
     z-index: 100;
     position: absolute;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     left: 60%;
-    top: 33%;
+    top: 37%;
 }
 
 #text3 {
     z-index: 100;
     position: absolute;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     left: 60%;
-    top: 78%;
+    top: 76%;
     width: 30%;
+}
+
+.lastElementServicii{
+    margin-top: 175px;
+
 }
 
 #image3 {
     z-index: 100;
     position: absolute;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     left: 60%;
-    top: 77%;
+    top: 74%;
 }
 
 #text4 {
     z-index: 100;
     position: absolute;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     left: 60%;
     top: 94%;
     width: 30%;
@@ -600,10 +672,17 @@ a:hover, a:focus {
     z-index: 100;
     position: absolute;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     left: 60%;
-    top: 93%;
+    top: 92%;
 }
+
+.wconectaText {
+    color: white;
+    padding-top: 60px;
+    padding-right: 50px;
+}
+
 .nav-tabs > li {
     text-align: center;
     display: inline-block;
@@ -621,8 +700,8 @@ a:hover, a:focus {
 
 .card-body-custom-third {
     background-color: #9e0b0f;
-    height: 350px;
-
+    height: 240px;
+    margin-top: -1px;
 }
 
 #circle {
@@ -701,12 +780,58 @@ p {
     border-radius: 42px;
 }
 
-.titleQuestionner{
+.titleQuestionner {
     background-color: #9e0b0f;
     padding: 17px;
 }
-.titleSection5{
+
+.titleSection5 {
     margin: 0px;
     font-size: 25px;
     color: #f5f5f5;
+}
+.author_bio_toggle_wrapper
+{
+
+}
+
+#author_bio_wrap
+{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    background: gray;
+    width: auto;
+    /*height: 50px;*/
+}
+
+.btnExpand{
+    background-color: #9e0b0f;
+    border-radius: 34px;
+}
+
+#author_bio_wrap_toggle
+{
+    display: block;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background: #9E9E77;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-variant: small-caps;
+    box-shadow: 2px 2px 3px #888888;
+    text-decoration:none;
+}
+
+#author_bio_wrap_toggle:hover
+{
+    text-decoration:none;
+    border-top: 1px groove white;
+    border-left: 1px groove white;
+    border-bottom: 1px solid #7B7B78;
+    border-right: 1px solid #7B7B78;
+    color: #663200;
+    background: #EBEBB3;
+    box-shadow: 1px 1px 2px #888888;
 }

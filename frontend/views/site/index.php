@@ -31,7 +31,7 @@ $this->title = 'My Yii Application';
                                 <!--Card image-->
                                 <img class="img-fluid fitIn" src="images/otsolutions.jpg">
                                 <!--Card content-->
-                                <div class="card-body card-body-custom">
+                                <div class="card-body card-body-custom paddingLeft">
                                     <!--Title-->
                                     <h3 class="card-title">REZERVARI FERRY VIA</h3>
                                     <img class="img-fluid homeOtSol" src="images/logootsol.gif">
@@ -48,15 +48,18 @@ $this->title = 'My Yii Application';
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 overSection">
                             <div class="card wtransnetCard">
                                 <div class="card-body card-body-custom">
                                     <div class="marginator">
-                                        <div class="row">
-                                            <h3> SERVICII DE BURSA TRANSPORT VIA</h3>
-                                        </div>
-                                        <div class="row">
-                                            <img class="img-fluid" src="images/logo-wtransnet.gif" alt="Card image cap">
+                                        <div class="paddingLeft">
+                                            <div class="row">
+                                                <h3> SERVICII DE BURSA TRANSPORT VIA</h3>
+                                            </div>
+                                            <div class="row">
+                                                <img class="img-fluid" src="images/logo-wtransnet.gif"
+                                                     alt="Card image cap">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -68,7 +71,7 @@ $this->title = 'My Yii Application';
                                     <!--Title-->
                                     <!--                                <h4 class="card-title">Card title</h4>-->
                                     <!--Text-->
-                                    <p class="card-text" style="font-size: 15px;margin-top: 16px;">
+                                    <p class="card-text paddingLeft" style="font-size: 15px;margin-top: 16px;">
                                         Vrei sa lucrezi cu Companii verificate cu nivel de solvabilitate ridicat sau cu
                                         Companii de Transport calificate? Vrei sa ai posibilitatea sa iti garantezi
                                         incasarea facturilor? Vrei sa iti dezvolti afacerea intr-un mediu sigur alaturi
@@ -107,12 +110,12 @@ $this->title = 'My Yii Application';
                                         de
                                         catre
                                         Bursa Wtransnet.
+                                        <a href="#" class="btn btn-primary moreButton" style="margin-top: 14%;">Afla mai
+                                            multe</a>
                                     </div>
 
                                     <div class="col-lg-4">
-                                        <a href="#" class="btn btn-primary moreButton">Afla mai multe</a>despre ultima
-                                        editie a acestui eveniment, ce companii au participat, si cum functioneaza mai
-                                        exact.
+
                                     </div>
 
                                 </div>
@@ -159,8 +162,6 @@ $this->title = 'My Yii Application';
 
         </div>
     </div>
-
-    <div class="at-twitter"><a href="//twitter.com/hendrysadrak" target="_blank">@hendrysadrak</a></div>
 </div>
 
 <script>// Hide Header on on scroll down
