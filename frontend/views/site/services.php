@@ -9,27 +9,28 @@ use yii\helpers\Html;
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
-    <div class="container">
-        <section class="firstSection">
-            <div class="image shit">
-            </div>
-            <div class="stuff" data-type="content">
-                <div class="row verticalAllign">
-                    <div class="col-lg-3 rowOfImages">
-                        <img class="img-fluid homeOtSol" src="images/logootsol.gif">
-                    </div>
-                    <div class="col-lg-3 rowOfImages">
-                        <img class="img-fluid" src="images/logo-wtransnet.gif" alt="Card image cap">
-                    </div>
-                    <div class="col-lg-3 rowOfImages">
-                        <img class="img-fluid" src="images/logo_w_connecta.gif" alt="Card image cap">
-                    </div>
-                    <div class="col-lg-3 rowOfImages">
-                        <img src="images/logo-wabi.gif">
-                    </div>
+    <section class="firstSection">
+        <div class="image shit">
+        </div>
+        <div class="stuff" data-type="content">
+            <div class="row verticalAllign">
+                <div class="col-lg-3 rowOfImages">
+                    <img class="img-fluid homeOtSol" src="images/logootsol.gif">
+                </div>
+                <div class="col-lg-3 rowOfImages">
+                    <img class="img-fluid" src="images/logo-wtransnet.gif" alt="Card image cap">
+                </div>
+                <div class="col-lg-3 rowOfImages">
+                    <img class="img-fluid" src="images/logo_w_connecta.gif" alt="Card image cap">
+                </div>
+                <div class="col-lg-3 rowOfImages">
+                    <img src="images/logo-wabi.gif">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <div class="container">
         <div class="contentPadding">
             <div class="paddingBigElements">
                 <div class="card firstCard">
@@ -49,122 +50,80 @@ $this->title = 'My Yii Application';
                             din
                             partea Nordica a Europei.
                         </p>
-                        <!--Card content-->
-                        <div class="card-body card-body-custom padding whiteCollor">
+                    </div>
 
-                            <div class="row">
+                    <!--Card content-->
+                    <div class="card-body card-body-custom padding whiteCollor">
 
-                                <div class="col-lg-3">
-                                    <div class="author_bio_toggle_wrapper">
-                                        <a href="#0" id="author_bio_wrap_toggleAnglia" class="btn  btn-sm btnExpand">Anglia</a>
-                                    </div>
-                                    <div id="author_bio_wrap" style="display: none;">
-                                        <p>Calais-Dover</p>
-                                        <p>Dunkerque-Dover</p>
-                                        <p>Calais-Folkestone</p>
-                                        <p>Hoek V Holland-Harwich</p>
-                                        <p>Hoek V Holland-Killingholme</p>
-                                        <p>Dieppe-Newhaven</p>
-                                        <p>Portsmouth-Fishbourne (Isle of Wight)</p>
-                                        <p>Lymington-Yarmouth (Isle of Wight)</p>
-                                    </div>
+                        <div class="row">
+
+                            <div class="col-lg-3">
+                                <div class="author_bio_toggle_wrapper">
+                                    <a href="#0" id="author_bio_wrap_toggleAnglia"
+                                       class="btn  btn-sm btnExpand">Anglia</a>
                                 </div>
-<!--                                <div class="col-lg-3">-->
-<!--                                    <div class="author_bio_toggle_wrapper">-->
-<!--                                        <a href="#0" id="author_bio_wrap_toggle">Expand Author Details</a>-->
-<!--                                    </div>-->
-<!--                                    <div id="author_bio_wrap" style="display: none;">-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="col-lg-3">-->
-<!--                                    <div class="author_bio_toggle_wrapper">-->
-<!--                                        <a href="#0" id="author_bio_wrap_toggle">Expand Author Details</a>-->
-<!--                                    </div>-->
-<!--                                    <div id="author_bio_wrap" style="display: none;">-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="col-lg-3">-->
-<!--                                    <div class="author_bio_toggle_wrapper">-->
-<!--                                        <a href="#0" id="author_bio_wrap_toggle">Expand Author Details</a>-->
-<!--                                    </div>-->
-<!--                                    <div id="author_bio_wrap" style="display: none;">-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!---->
-<!--                                <div class="col-lg-4">-->
-<!--                                    <div class="author_bio_toggle_wrapper">-->
-<!--                                        <a href="#0" id="author_bio_wrap_toggle">Expand Author Details</a>-->
-<!--                                    </div>-->
-<!--                                    <div id="author_bio_wrap" style="display: none;">-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="col-lg-4">-->
-<!--                                    <div class="author_bio_toggle_wrapper">-->
-<!--                                        <a href="#0" id="author_bio_wrap_toggle">Expand Author Details</a>-->
-<!--                                    </div>-->
-<!--                                    <div id="author_bio_wrap" style="display: none;">-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="col-lg-4">-->
-<!--                                    <div class="author_bio_toggle_wrapper">-->
-<!--                                        <a href="#0" id="author_bio_wrap_toggle">Expand Author Details</a>-->
-<!--                                    </div>-->
-<!--                                    <div id="author_bio_wrap" style="display: none;">-->
-<!--                                    </div>-->
-<!--                                </div>-->
-
+                                <div id="author_bio_wrap" style="display: none;">
+                                    <p>Calais-Dover</p>
+                                    <p>Dunkerque-Dover</p>
+                                    <p>Calais-Folkestone</p>
+                                    <p>Hoek V Holland-Harwich</p>
+                                    <p>Hoek V Holland-Killingholme</p>
+                                    <p>Dieppe-Newhaven</p>
+                                    <p>Portsmouth-Fishbourne (Isle of Wight)</p>
+                                    <p>Lymington-Yarmouth (Isle of Wight)</p>
+                                </div>
                             </div>
-
                         </div>
-                        <div class="card-body card-body-custom-second whiteCollor">
-                            <div class="row" style="text-align: center;">
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <p id="circle"><img
-                                                src="images/phone.gif"
-                                                alt="otsolutions" class="img-responsive"></p>
-                                    <p>Preturi mai mici cu pana la 40% fata de cele online sau de cele din
-                                        port;</p>
 
-                                </div>
-                                <div class="col-lg-2 col-md-4 col-sm-6">
-                                    <p id="circle"><img
-                                                src="images/calendar.gif"
-                                                alt="otsolutions" class="img-responsive"></p>
-                                    <p>Disponibilitate si suport<br>
-                                        24 ore/24, 7 zile/7;</p></div>
-                                <div class="col-lg-2 col-md-6 col-sm-6">
-                                    <p id="circle"><img
-                                                src="images/note.gif"
-                                                alt="otsolutions" class="img-responsive"></p>
-                                    <p>Facturare la valoare neta din Bulgaria;</p></div>
+                    </div>
+                    <div class="card-body card-body-custom-second whiteCollor">
+                        <div class="row" style="text-align: center;">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <p id="circle"><img
+                                            src="images/phone.gif"
+                                            alt="otsolutions" class="img-responsive"></p>
+                                <p>Preturi mai mici cu pana la 40% fata de cele online sau de cele din
+                                    port;</p>
 
-                                <div class="col-lg-2 col-md-6 col-sm-12">
-                                    <p id="circle"><img
-                                                src="images/cash.gif"
-                                                alt="otsolutions" class="img-responsive"></p>
-                                    <p>Flexibilitate din punct de vedere al monedei;</p></div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <p id="circle"><img
-                                                src="images/agreed.gif"
-                                                alt="otsolutions" class="img-responsive"></p>
-                                    <p>Consultanta Gratuita in privinta cotatiilor de pret pe orice ruta;</p>
-                                </div>
                             </div>
-                            <div class="row secondSectionPadding">
-                                <div class="col-lg-9">
-                                    <p>Daca sunteti interesat in a obtine cotatii de pret pe o anumita ruta sau
-                                        aveti
-                                        nevoie
-                                        de consultanta, completati formularul de mai jos, iar un reprezentat OPTIMUS
-                                        va
-                                        lua
-                                        legatura cu dvs. pentru a va oferi mai multe detalii.</p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <a href="https://www.otsolutions.bg" class="btn btn-primary btn-sm moreButton">Afla
-                                        mai multe</a>
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <p id="circle"><img
+                                            src="images/calendar.gif"
+                                            alt="otsolutions" class="img-responsive"></p>
+                                <p>Disponibilitate si suport<br>
+                                    24 ore/24, 7 zile/7;</p></div>
+                            <div class="col-lg-2 col-md-6 col-sm-6">
+                                <p id="circle"><img
+                                            src="images/note.gif"
+                                            alt="otsolutions" class="img-responsive"></p>
+                                <p>Facturare la valoare neta din Bulgaria;</p></div>
 
-                                </div>
+                            <div class="col-lg-2 col-md-6 col-sm-12">
+                                <p id="circle"><img
+                                            src="images/cash.gif"
+                                            alt="otsolutions" class="img-responsive"></p>
+                                <p>Flexibilitate din punct de vedere al monedei;</p></div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <p id="circle"><img
+                                            src="images/agreed.gif"
+                                            alt="otsolutions" class="img-responsive"></p>
+                                <p>Consultanta Gratuita in privinta cotatiilor de pret pe orice ruta;</p>
+                            </div>
+                        </div>
+                        <div class="row secondSectionPadding">
+                            <div class="col-lg-9">
+                                <p>Daca sunteti interesat in a obtine cotatii de pret pe o anumita ruta sau
+                                    aveti
+                                    nevoie
+                                    de consultanta, completati formularul de mai jos, iar un reprezentat OPTIMUS
+                                    va
+                                    lua
+                                    legatura cu dvs. pentru a va oferi mai multe detalii.</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="https://www.otsolutions.bg" class="btn btn-primary btn-sm moreButton">Afla
+                                    mai multe</a>
+
                             </div>
                         </div>
                     </div>
@@ -175,8 +134,8 @@ $this->title = 'My Yii Application';
             <div class="paddingBigElements">
                 <div class="secondTab">
                     <img class="img-fluid fitIn" src="images/poza-wtransnet.jpg">
-                    <img id="image2" class="img-fluid homeOtSol" src="images/logo-wtransnet.gif">
-                    <p id="text2">
+                    <img id="image" class="img-fluid homeOtSol" src="images/logo-wtransnet.gif">
+                    <p id="text">
                         Este o agentie de rezervari feribot pentru vehicule comerciale cu sediul in Ruse, Bulgaria.
                         Va
                         poate
@@ -293,44 +252,12 @@ $this->title = 'My Yii Application';
 
             </div>
 
-            <!--            <div class="paddingBigElements">-->
-            <!---->
-            <!--                <div class="row">-->
-            <!--                    <div class="col-lg-4">-->
-            <!--                        <div>-->
-            <!--                            <p>-->
-            <!--                                Aplicati acum pentru un CONT DEMO, iar unul dintre operatorii nostri va va pune la-->
-            <!--                                dispozitie informatiile necesare pentru a va convinge de ce mai mult de 11000 de-->
-            <!--                                companii si-au pus increderea in noi.-->
-            <!--                            </p>-->
-            <!--                            <div class="row">-->
-            <!--                                <div class="col-lg-12">-->
-            <!--                                    <p>WTRANSNET ROMANIA</p>-->
-            <!--                                </div>-->
-            <!--                                <div class="col-lg-12">-->
-            <!--                                    <p>Tel: +40 769 02 60 32</p>-->
-            <!--                                </div>-->
-            <!--                                <div class="col-lg-12">-->
-            <!--                                    <p>Tel: +40 755 01 78 88</p>-->
-            <!--                                </div>-->
-            <!--                                <div class="col-lg-12">-->
-            <!--                                    <p>sales.romania@wtransnet.com</p>-->
-            <!--                                </div>-->
-            <!--                            </div>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                    <div class="col-lg-8">-->
-            <!--                        <iframe width="750" height="475" src="https://www.youtube.com/embed/TaytXCNUTkY"></iframe>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-
             <div class="paddingBigElements">
 
                 <div class="secondTab">
                     <img class="img-fluid fitIn" src="images/wconnecta-banner.jpg">
-                    <img id="image3" class="img-fluid homeOtSol" src="images/wconecta-logo.gif">
-                    <p id="text3">
+                    <img id="image" class="img-fluid homeOtSol" src="images/wconecta-logo.gif">
+                    <p id="text">
                         Ce este Wconnecta?
                         Wconnecta este un proiect proeminent, care dupa 7 editii, a devenit un eveniment cu un
                         impact puternic in randul companiilor din domeniul transporturilor la nivel European. Scopul
@@ -368,17 +295,20 @@ $this->title = 'My Yii Application';
             </div>
 
             <div class="paddingBigElements lastElementServicii">
-                <img class="img-fluid fitIn" src="images/wabi-banner.jpg">
-                <img id="image4" class="img-fluid homeOtSol" src="images/logo-wabi.gif">
-                <p id="text4">
-                    WA-BI va pune la dispozitie servicii de dezvoltare WEB, optimizare SEO, securizarea bazelor
-                    de
-                    date, mentenanta si dezvoltare aplicatii. Va oferim consultanta si ne asiguram ca veti
-                    obtine
-                    cea mai buna solutie pentru produsele si serviciile pe care compania dumneavoastra doreste a
-                    le
-                    promova.
-                </p>
+                <div class="secondTab">
+
+                    <img class="img-fluid fitIn" src="images/wabi-banner.jpg">
+                    <img id="image" class="img-fluid homeOtSol" src="images/logo-wabi.gif">
+                    <p id="text">
+                        WA-BI va pune la dispozitie servicii de dezvoltare WEB, optimizare SEO, securizarea bazelor
+                        de
+                        date, mentenanta si dezvoltare aplicatii. Va oferim consultanta si ne asiguram ca veti
+                        obtine
+                        cea mai buna solutie pentru produsele si serviciile pe care compania dumneavoastra doreste a
+                        le
+                        promova.
+                    </p>
+                </div>
             </div>
 
         </div>
@@ -423,10 +353,11 @@ $this->title = 'My Yii Application';
 
         lastScrollTop = st;
     }
+
     var expandID = [1, 2, 3, 4, 5, 6, 7];
 
-            $("#author_bio_wrap_toggleAnglia").click(function () {
-                $("#author_bio_wrap").slideToggle("fast");
+    $("#author_bio_wrap_toggleAnglia").click(function () {
+        $("#author_bio_wrap").slideToggle("fast");
 
-            });
+    });
 </script>

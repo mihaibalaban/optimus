@@ -16,18 +16,18 @@ use yii\bootstrap\Button;
 $this->title = 'Optimus Transport';
 ?>
 <div class="site-index">
+    <section class="firstSection" style="    z-index: 0;">
+        <div class="image partners">
+        </div>
+        <div class="stuff" data-type="content">
+            <h3>PARTENERI</h3>
+        </div>
+    </section>
     <div class="container">
-        <section class="firstSection" style="    z-index: 0;">
-            <div class="image partners">
-            </div>
-            <div class="stuff" data-type="content">
-                <h3>PARTENERI</h3>
-            </div>
-        </section>
         <div class="contentPadding overSectionPartners">
             <div class="paddingBigElements">
                 <div data-type="background" data-speed="6">
-                    <div class="row">
+                    <div class="row" style="max-height: 576px;">
                         <div class="col-lg-7 col-md-7 secondSectionPartners">
                             <div class=" part">
 

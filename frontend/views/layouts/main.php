@@ -39,9 +39,9 @@ AppAsset::register($this);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index'], 'options' => ['class' => ' btn btn-2']],
         ['label' => 'Servicii', 'url' => ['/site/services'], 'options' => ['class' => ' btn btn-2']],
-        ['label' => 'Despre noi', 'url' => ['/site/about'], 'options' => ['class' => ' btn btn-2']],
         ['label' => 'Parteneri', 'url' => ['/site/partners'], 'options' => ['class' => ' btn btn-2']],
         ['label' => 'Cariere', 'url' => ['/site/carriers'], 'options' => ['class' => ' btn btn-2']],
+        ['label' => 'Despre noi', 'url' => ['/site/about'], 'options' => ['class' => ' btn btn-2']],
         ['label' => 'Contact', 'url' => ['/site/contact'], 'options' => ['class' => ' btn btn-2']],
     ];
     if (Yii::$app->user->isGuest) {
@@ -64,7 +64,7 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
-    <div class="container">
+    <div class="container" style="width: 100%; padding: 0;">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>

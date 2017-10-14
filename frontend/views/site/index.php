@@ -4,19 +4,18 @@
 
 $this->title = 'My Yii Application';
 ?>
+<section class="firstSection">
+    <div class="image" data-type="background" data-speed="2"></div>
+    <div class="stuff" data-type="content">
+        <div>
+            <h1 style="font-size: 55px;">Succesul tau</h1>
+            <h1 style="font-size: 55px; font-weight: bold;">MISIUNEA NOASTRA</h1>
+        </div>
+    </div>
+</section>
 <div class="site-index">
 
     <div class="container">
-
-        <section class="firstSection">
-            <div class="image" data-type="background" data-speed="2"></div>
-            <div class="stuff" data-type="content">
-                <div>
-                    <h1 style="font-size: 55px;">Succesul tau</h1>
-                    <h1 style="font-size: 55px; font-weight: bold;">MISIUNEA NOASTRA</h1>
-                </div>
-            </div>
-        </section>
 
         <div class="contentPadding">
 
@@ -36,7 +35,7 @@ $this->title = 'My Yii Application';
                                     <h3 class="card-title">REZERVARI FERRY VIA</h3>
                                     <img class="img-fluid homeOtSol" src="images/logootsol.gif">
                                     <!--Text-->
-                                    <p class="card-text" style="font-size: 15px">Acoperind toata partea de Nord a
+                                    <p class="card-text">Acoperind toata partea de Nord a
                                         Europei,
                                         va punem la dispozitie prin partenerului nostru, OT SOLUTIONS o varietate de
                                         rute ce
@@ -99,17 +98,19 @@ $this->title = 'My Yii Application';
                                         <img class="img-fluid" src="images/logo_w_connecta.gif" alt="Card image cap">
                                     </div>
                                     <div class="col-lg-8" style="    margin-top: 18px;">
-
-                                        Oportunitatea perfecta de a interactiona cu alte companii pentru a va putea
-                                        prezenta
-                                        serviciile si a identifica parteneri pentru cursele dumneavoastra. Reprezinta
-                                        unul
-                                        dintre
-                                        cele mai importante evenimente din domeniul transporturilor si este organizat
-                                        anual
-                                        de
-                                        catre
-                                        Bursa Wtransnet.
+                                        <p>
+                                            Oportunitatea perfecta de a interactiona cu alte companii pentru a va putea
+                                            prezenta
+                                            serviciile si a identifica parteneri pentru cursele dumneavoastra.
+                                            Reprezinta
+                                            unul
+                                            dintre
+                                            cele mai importante evenimente din domeniul transporturilor si este
+                                            organizat
+                                            anual
+                                            de
+                                            catre
+                                            Bursa Wtransnet.</p>
                                         <a href="#" class="btn btn-primary moreButton" style="margin-top: 14%;">Afla mai
                                             multe</a>
                                     </div>

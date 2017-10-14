@@ -16,30 +16,31 @@ use yii\bootstrap\Button;
 $this->title = 'Optimus Transport';
 ?>
 <div class="site-index">
-    <div class="container">
-        <section class="firstSection" style="    z-index: 0;">
-            <div class="image carriers">
-            </div>
-            <div class="stuff" data-type="content">
-                <h3>CARIERE</h3>
-                <div class="row padding">
-                    <div class="col-lg-4">
-                        <a href="#" class="btn btn-primary moreButton">Angajari</a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="#" class="btn btn-primary moreButton">Intership</a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="#" class="btn btn-primary moreButton">Freight Operator</a>
-                    </div>
+    <section class="firstSection" style="    z-index: 0;">
+        <div class="image carriers">
+        </div>
+        <div class="stuff" data-type="content">
+            <h3>CARIERE</h3>
+            <div class="row padding">
+                <div class="col-lg-4">
+                    <a href="#" class="btn btn-primary moreButton">Angajari</a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="#" class="btn btn-primary moreButton">Intership</a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="#" class="btn btn-primary moreButton">Freight Operator</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <div class="container">
         <div class="contentPadding">
             <div class="paddingBigElements">
                 <div data-type="background" data-speed="6">
                     <div class="row" style="max-height: 400px;">
-                        <div class="col-lg-7 col-md-7" style="width: auto;    padding-right: 0;">
+                        <div class="col-lg-7 col-md-7" style="padding-right: 0;">
                             <img class="carriersSecondSection-image" src="images/carriersFirstImage.jpg">
                         </div>
                         <div class="col-lg-5 col-md-5 secondSectionPartners">
@@ -92,12 +93,11 @@ $this->title = 'Optimus Transport';
                 </div>
             </div>
             <div class="paddingBigElements">
-                <div data-type="background" data-speed="6">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-5">
+                    <div class="row" style="height: 564px;">
+                        <div class="col-lg-5 col-md-5" style="height: 564px;">
                             <img class="partnersSecondSection-image" src="images/carrier-freelance.jpg">
                         </div>
-                        <div class="col-lg-7 col-md-7 secondSectionPartners">
+                        <div class="col-lg-7 col-md-7 secondSectionPartners" style="height: 564px;">
                             <div class=" part">
                                 <h4>FREELANCE REPRESENTATIVE (WTRANSNET)</h4>
                                 <p>Acesta reprezinta proiectul nostru dedicat Expeditorilor Caselor de Expeditii din
@@ -119,7 +119,6 @@ $this->title = 'Optimus Transport';
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>

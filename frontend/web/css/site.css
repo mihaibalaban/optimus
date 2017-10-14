@@ -10,10 +10,10 @@ body {
     color: white;
 }
 
-.contentPadding {
-    margin-left: 50px;
-    margin-right: 50px;
-}
+/*.contentPadding {*/
+    /*margin-left: 50px;*/
+    /*margin-right: 50px;*/
+/*}*/
 
 .wrap {
     min-height: 100%;
@@ -26,12 +26,12 @@ body {
     /*padding: 70px 15px 20px;*/
 }
 
-.container {
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: 0;
-    margin-left: 0;
-}
+/*.container {*/
+    /*padding-right: 0;*/
+    /*padding-left: 0;*/
+    /*margin-right: 0;*/
+    /*margin-left: 0;*/
+/*}*/
 
 .footer {
     background-color: white;
@@ -178,7 +178,7 @@ a.desc:after {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     position: relative;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .firstSection {
@@ -318,7 +318,7 @@ a:hover, a:focus {
 }
 
 .card-text {
-    font-size: 15px !important;
+    /*font-size: 15px !important;*/
     padding-top: 13px;
 }
 
@@ -355,30 +355,29 @@ a:hover, a:focus {
     height: 45%;
 }
 
-.part{
-    margin:20px 20px 20px 20px;
+.part {
+    margin: 20px 20px 20px 20px;
     color: white;
     margin-bottom: 10px;
 }
 
-.secondSectionPartners{
+.secondSectionPartners {
     background-color: #9e0b0f;
     height: -webkit-fill-available;
 }
 
-.partnersSecondSection-image{
+.partnersSecondSection-image {
     background-size: cover;
     margin-left: -15px;
-    height: -webkit-fill-available;
 }
 
-.carriersSecondSection-image{
+.carriersSecondSection-image {
     width: auto;
     height: -webkit-fill-available;
 }
 
-.customSectionPartners{
-height: 600px;
+.customSectionPartners {
+    height: 600px;
 }
 
 .third-content-b {
@@ -415,9 +414,11 @@ height: 600px;
     margin-top: -100px;
     z-index: 999;
 }
-.cardPartners{
-    min-height:105px;
+
+.cardPartners {
+    min-height: 105px;
 }
+
 .stufff {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -441,7 +442,7 @@ height: 600px;
     /* font-size: 26px; */
 }
 
-.customSectionAboutUs{
+.customSectionAboutUs {
     height: 450px !important;
 
 }
@@ -469,11 +470,11 @@ height: 600px;
 @media only screen and (max-width: 1200px) {
 
     #image {
-        top: 11% !important;
+        /*top: 11% !important;*/
     }
 
     #text {
-        top: 11% !important;
+        /*top: 11% !important;*/
         background: rgba(16, 16, 16, 0.8);
         /* opacity: 0.8; */
         padding: 10px;
@@ -628,10 +629,11 @@ height: 600px;
     background-image: url('../images/aboutus-header.jpg') !important
 }
 
-.partners{
+.partners {
     background-image: url('../images/header-partners.jpg') !important
 }
-.carriers{
+
+.carriers {
     background-image: url('../images/carriers-header.jpg') !important
 }
 
@@ -664,7 +666,11 @@ height: 600px;
     color: white;
     font-size: 16px;
     left: 60%;
-    top: 16%;
+    top: 0%;
+}
+
+.aboutUsUltimateSection {
+    background-image: url('images/aboutUs-mission.jpg');
 }
 
 #text2 {
@@ -745,6 +751,10 @@ height: 600px;
     width: 33% !important;
 }
 
+.secondTab {
+    position: relative;
+}
+
 .card-body-custom-second {
     background-color: #9e0b0f;
     padding: 20px;
@@ -773,6 +783,25 @@ p {
     margin: 0 0 10px;
     font-size: 15px;
 }
+
+/*h1 {*/
+    /*font-size: 5.9vw;*/
+/*}*/
+/*h2 {*/
+    /*font-size: 3.0vh;*/
+/*}*/
+
+/*h3 {*/
+    /*font-size: 2.7vh;*/
+/*}*/
+
+/*h4 {*/
+    /*font-size: 2.5vh;*/
+/*}*/
+
+p {
+     font-size: 14px!important;
+ }
 
 .serviciiSecondSection {
     height: 154vh !important;
@@ -803,7 +832,6 @@ p {
     float: none;
     overflow: hidden;
 }
-
 
 .circle2 > img {
     margin: auto;

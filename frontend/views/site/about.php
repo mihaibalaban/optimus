@@ -16,23 +16,23 @@ use yii\bootstrap\Button;
 $this->title = 'Optimus Transport';
 ?>
 <div class="site-index">
-    <div class="container">
-        <section class="firstSection">
-            <div class="image aboutUs">
-            </div>
-            <div class="stuff" data-type="content">
-                <p class="aboutUsTextHeader">
-                    Lorem ipsum dolor sit amet, ex persius democritum persequeris mei. Has cu impetus docendi
-                    referrentur. No vel nullam cetero. Suas dictas ius ea, option fuisset his cu, cu has enim mutat. Id
-                    cetero phaedrum qualisque pri, elitr libris nonumes quo ex.
+    <section class="firstSection">
+        <div class="image aboutUs">
+        </div>
+        <div class="stuff" data-type="content">
+            <p class="aboutUsTextHeader">
+                Lorem ipsum dolor sit amet, ex persius democritum persequeris mei. Has cu impetus docendi
+                referrentur. No vel nullam cetero. Suas dictas ius ea, option fuisset his cu, cu has enim mutat. Id
+                cetero phaedrum qualisque pri, elitr libris nonumes quo ex.
 
-                    Mei cu iriure ancillae, libris delectus mei eu. Propriae voluptua ei cum, aperiam abhorreant
-                    scripserit ex mel. Est ne tota lucilius inciderint, ei vis amet ipsum evertitur. Audiam prompta
-                    sensibus in per, has adhuc perfecto aliquando ei. Munere percipitur nec et, et inermis admodum sit.
-                    Qui et autem complectitur, eu docendi blandit definiebas quo. Sit id sumo vide, quod vivendo ut quo.
-                </p>
-            </div>
-        </section>
+                Mei cu iriure ancillae, libris delectus mei eu. Propriae voluptua ei cum, aperiam abhorreant
+                scripserit ex mel. Est ne tota lucilius inciderint, ei vis amet ipsum evertitur. Audiam prompta
+                sensibus in per, has adhuc perfecto aliquando ei. Munere percipitur nec et, et inermis admodum sit.
+                Qui et autem complectitur, eu docendi blandit definiebas quo. Sit id sumo vide, quod vivendo ut quo.
+            </p>
+        </div>
+    </section>
+    <div class="container">
         <div class="contentPadding">
             <div class="paddingBigElements">
                 <div class="ACon">
@@ -75,23 +75,25 @@ $this->title = 'Optimus Transport';
                                     <div class="col-lg-12">
                                         <img class="img-fluid" src="images/logo_w_connecta.gif" alt="Card image cap">
                                     </div>
-                                    <div class="col-lg-8" style="    margin-top: 18px;">
-
-                                        Oportunitatea perfecta de a interactiona cu alte companii pentru a va putea
-                                        prezenta
-                                        serviciile si a identifica parteneri pentru cursele dumneavoastra. Reprezinta
-                                        unul
-                                        dintre
-                                        cele mai importante evenimente din domeniul transporturilor si este organizat
-                                        anual
-                                        de
-                                        catre
-                                        Bursa Wtransnet.
+                                    <div class="col-lg-8 col-md-6" style="    margin-top: 18px;">
+                                        <p>
+                                            Oportunitatea perfecta de a interactiona cu alte companii pentru a va putea
+                                            prezenta
+                                            serviciile si a identifica parteneri pentru cursele dumneavoastra.
+                                            Reprezinta
+                                            unul
+                                            dintre
+                                            cele mai importante evenimente din domeniul transporturilor si este
+                                            organizat
+                                            anual
+                                            de
+                                            catre
+                                            Bursa Wtransnet.</p>
                                         <a href="#" class="btn btn-primary moreButton" style="margin-top: 14%;">Afla mai
                                             multe</a>
                                     </div>
 
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4 col-md-6">
 
                                     </div>
 
@@ -107,13 +109,13 @@ $this->title = 'Optimus Transport';
                 </div>
             </div>
 
-            <div class="customSectionAboutUs paddingBigElements">
+            <div class=" paddingBigElements">
                 <div class="image" data-type="background" data-speed="6">
                     <div class="stufff" data-type="content">
 
-                        <div class="row" style="height: 100%;">
+                        <div class="row">
                             <div class="col-lg-6 col-md-6">
-                                <img src="images/aboutUs-mission.jpg">
+                                <img src="images/aboutUs-mission.jpg" style="    width: 100%;">
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <h3>MISIUNEA NOASTRA</h3>
