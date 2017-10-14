@@ -31,7 +31,7 @@ $this->title = 'My Yii Application';
             </div>
         </section>
         <div class="contentPadding">
-            <div class="paddingBigElements serviciiSecondSection">
+            <div class="paddingBigElements">
                 <div class="card firstCard">
 
                     <div class="secondTab">

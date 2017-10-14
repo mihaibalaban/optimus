@@ -40,6 +40,7 @@ AppAsset::register($this);
         ['label' => 'Home', 'url' => ['/site/index'], 'options' => ['class' => ' btn btn-2']],
         ['label' => 'Servicii', 'url' => ['/site/services'], 'options' => ['class' => ' btn btn-2']],
         ['label' => 'Despre noi', 'url' => ['/site/about'], 'options' => ['class' => ' btn btn-2']],
+        ['label' => 'Parteneri', 'url' => ['/site/partners'], 'options' => ['class' => ' btn btn-2']],
         ['label' => 'Contact', 'url' => ['/site/contact'], 'options' => ['class' => ' btn btn-2']],
     ];
     if (Yii::$app->user->isGuest) {

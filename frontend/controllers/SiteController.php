@@ -75,6 +75,11 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionPartners()
+    {
+        return $this->render('partners');
+    }
+
     public function actionServices()
     {
         return $this->render('services');

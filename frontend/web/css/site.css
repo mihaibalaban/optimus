@@ -355,6 +355,27 @@ a:hover, a:focus {
     height: 45%;
 }
 
+.part{
+    margin:20px 20px 20px 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.secondSectionPartners{
+    background-color: #9e0b0f;
+    height: -webkit-fill-available;
+}
+
+.partnersSecondSection-image{
+    background-size: cover;
+    margin-left: -15px;
+    height: -webkit-fill-available;
+}
+
+.customSectionPartners{
+height: 600px;
+}
+
 .third-content-b {
     /*background-image: url('../images/wconnecta.jpg');*/
     /*width: 100%;*/
@@ -385,6 +406,13 @@ a:hover, a:focus {
     z-index: 999;
 }
 
+.overSectionPartners {
+    margin-top: -100px;
+    z-index: 999;
+}
+.cardPartners{
+    min-height:105px;
+}
 .stufff {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -593,6 +621,10 @@ a:hover, a:focus {
 
 .aboutUs {
     background-image: url('../images/aboutus-header.jpg') !important
+}
+
+.partners{
+    background-image: url('../images/header-partners.jpg') !important
 }
 
 .aboutUsTextHeader {

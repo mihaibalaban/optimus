@@ -13,7 +13,7 @@ use yii\helpers\Html;
 use kartik\tabs\TabsX;
 use yii\bootstrap\Button;
 
-$this->title = 'Optimus: despre noi';
+$this->title = 'Optimus Transport';
 ?>
 <div class="site-index">
     <div class="container">
