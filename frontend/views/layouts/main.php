@@ -41,11 +41,12 @@ AppAsset::register($this);
         ['label' => 'Servicii', 'url' => ['/site/services'], 'options' => ['class' => ' btn btn-2']],
         ['label' => 'Despre noi', 'url' => ['/site/about'], 'options' => ['class' => ' btn btn-2']],
         ['label' => 'Parteneri', 'url' => ['/site/partners'], 'options' => ['class' => ' btn btn-2']],
+        ['label' => 'Cariere', 'url' => ['/site/carriers'], 'options' => ['class' => ' btn btn-2']],
         ['label' => 'Contact', 'url' => ['/site/contact'], 'options' => ['class' => ' btn btn-2']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup'], 'options' => ['class' => ' btn btn-2']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login'], 'options' => ['class' => ' btn btn-2']];
+//        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup'], 'options' => ['class' => ' btn btn-2']];
+//        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login'], 'options' => ['class' => ' btn btn-2']];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')

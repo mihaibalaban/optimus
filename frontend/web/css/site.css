@@ -372,6 +372,11 @@ a:hover, a:focus {
     height: -webkit-fill-available;
 }
 
+.carriersSecondSection-image{
+    width: auto;
+    height: -webkit-fill-available;
+}
+
 .customSectionPartners{
 height: 600px;
 }
@@ -626,6 +631,9 @@ height: 600px;
 .partners{
     background-image: url('../images/header-partners.jpg') !important
 }
+.carriers{
+    background-image: url('../images/carriers-header.jpg') !important
+}
 
 .aboutUsTextHeader {
 }
@@ -784,6 +792,18 @@ p {
     float: none;
     overflow: hidden;
 }
+
+.circleCarriers {
+    background-color: #080225;
+    border-radius: 50%;
+    width: 426px;
+    height: 426px;
+    margin: 4%;
+    display: inline-block;
+    float: none;
+    overflow: hidden;
+}
+
 
 .circle2 > img {
     margin: auto;

@@ -1,4 +1,5 @@
 <?php
+
 namespace frontend\controllers;
 
 use Yii;
@@ -78,6 +79,11 @@ class SiteController extends Controller
     public function actionPartners()
     {
         return $this->render('partners');
+    }
+
+    public function actionCarriers()
+    {
+        return $this->render('carriers');
     }
 
     public function actionServices()
