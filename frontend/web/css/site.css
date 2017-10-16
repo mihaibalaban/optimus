@@ -11,8 +11,8 @@ body {
 }
 
 /*.contentPadding {*/
-    /*margin-left: 50px;*/
-    /*margin-right: 50px;*/
+/*margin-left: 50px;*/
+/*margin-right: 50px;*/
 /*}*/
 
 .wrap {
@@ -27,10 +27,10 @@ body {
 }
 
 /*.container {*/
-    /*padding-right: 0;*/
-    /*padding-left: 0;*/
-    /*margin-right: 0;*/
-    /*margin-left: 0;*/
+/*padding-right: 0;*/
+/*padding-left: 0;*/
+/*margin-right: 0;*/
+/*margin-left: 0;*/
 /*}*/
 
 .footer {
@@ -231,6 +231,11 @@ a.desc:after {
 /*background-image: url('../images/services-header.jpg');*/
 /*}*/
 
+.firstCardPartners {
+    background-color: #9e0b0f;
+    max-height: 576px;
+}
+
 .container section .image {
     background-attachment: fixed;
     background-size: cover;
@@ -368,7 +373,7 @@ a:hover, a:focus {
 
 .partnersSecondSection-image {
     background-size: cover;
-    margin-left: -15px;
+    width: 100%;
 }
 
 .carriersSecondSection-image {
@@ -467,27 +472,6 @@ a:hover, a:focus {
 
 }
 
-@media only screen and (max-width: 1200px) {
-
-    #image {
-        /*top: 11% !important;*/
-    }
-
-    #text {
-        /*top: 11% !important;*/
-        background: rgba(16, 16, 16, 0.8);
-        /* opacity: 0.8; */
-        padding: 10px;
-        /* border-radius: 17px; */
-        left: 54%;
-        z-index: 100;
-        position: absolute;
-        color: white;
-        font-size: 15px;
-        /* left: 40%; */
-        width: 38%;
-    }
-}
 
 .col-md-12 > .third-content-a {
     border-top-right-radius: 0;
@@ -536,6 +520,11 @@ a:hover, a:focus {
     display: inline-block;
 }
 
+.bottomPartPartners {
+    background: #080225;
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .navbar-right {
         float: unset !important;
@@ -567,6 +556,7 @@ a:hover, a:focus {
     letter-spacing: 0;
     margin: inherit;
     font-size: 14px;
+    padding: 7px;
 }
 
 .btn-2:hover,
@@ -785,23 +775,23 @@ p {
 }
 
 /*h1 {*/
-    /*font-size: 5.9vw;*/
+/*font-size: 5.9vw;*/
 /*}*/
 /*h2 {*/
-    /*font-size: 3.0vh;*/
+/*font-size: 3.0vh;*/
 /*}*/
 
 /*h3 {*/
-    /*font-size: 2.7vh;*/
+/*font-size: 2.7vh;*/
 /*}*/
 
 /*h4 {*/
-    /*font-size: 2.5vh;*/
+/*font-size: 2.5vh;*/
 /*}*/
 
 p {
-     font-size: 14px!important;
- }
+    font-size: 14px !important;
+}
 
 .serviciiSecondSection {
     height: 154vh !important;
@@ -841,6 +831,11 @@ p {
 .sixElements {
     margin-left: -121px;
     margin-top: 93px;
+}
+
+.menuLogo {
+    padding-top: 5px;
+    width: 130px;
 }
 
 .elementFromSix {
@@ -1139,4 +1134,224 @@ p {
     /*background:#FF7364;*/
     /*border-left: 3px solid #891d1d;*/
     /*box-shadow: inset 0px 0px 8px rgba(0,0,0,0.2);*/
+}
+
+.displayNone {
+    display: block;
+}
+
+.paddingLeft {
+    padding-left: 15px;
+}
+
+.paddingRigth {
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .firstCardPartners {
+        background-color: #9e0b0f;
+        max-height: 472px;
+    }
+
+    .homeOtSol {
+        margin-bottom: 15px;
+        margin-top: 5px;
+        width: 171px;
+    }
+
+    #image {
+        /*top: 11% !important;*/
+    }
+
+    #text {
+        /*top: 11% !important;*/
+        background: rgba(16, 16, 16, 0.8);
+        /* opacity: 0.8; */
+        padding: 10px;
+        /* border-radius: 17px; */
+        left: 54%;
+        z-index: 100;
+        position: absolute;
+        color: white;
+        font-size: 15px;
+        /* left: 40%; */
+        width: 38%;
+    }
+
+    .third-content-b {
+        height: -webkit-fill-available;
+        z-index: -1;
+        height: 287px;
+    }
+
+    .third-content-a {
+        background-color: #9e0b0f;
+        height: -webkit-fill-available;
+        border-top-right-radius: 30em;
+        border-bottom-right-radius: 30em;
+        height: 287px;
+    }
+
+    .wc {
+        text-align: left;
+        margin-top: 34px;
+        margin-left: 0;
+        margin-right: 5%;
+        color: white;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .overOnOneThousand {
+        margin-top: -0;
+        z-index: 0;
+    }
+
+    .paddingBigElements {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        height: 100%;
+    }
+
+    .firstCardPartners{
+        max-height: 100%;
+    }
+
+    .secondSectionPartners {
+        background: rgba(16, 16, 16, 0.8);
+        height: 100%;
+    }
+
+    .part {
+        margin: 0;
+        color: white;
+        margin-bottom: 0;
+        padding-top: 45px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .displayNonePartners {
+        display: none;
+    }
+
+    .third-content-a {
+        background-color: #9e0b0f;
+        height: -webkit-fill-available;
+        border-top-right-radius: 30em;
+        border-bottom-right-radius: 30em;
+        z-index: 999;
+        height: 250px;
+    }
+
+    .third-content-b{
+        height: 250px;
+    }
+
+    .customSection {
+        height: 350px !important;
+    }
+
+    .firstCardPartners {
+        background-image: url(../images/secondSection-partners.jpg);
+        background-size: cover;
+        padding: 0;
+    }
+
+    .wc {
+        text-align: left;
+        margin-top: 16px;
+        margin-left: 0%;
+        margin-right: 5%;
+        color: white;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .paddingLeft {
+        padding-left: 0;
+    }
+
+    .paddingRigth {
+        padding-right: 0;
+    }
+
+    .third-content-a {
+        height: 45%;
+        background-image: url(../images/wconnecta.jpg);
+        background-size: cover;
+        padding: 0;
+    }
+
+    .wc {
+        text-align: center;
+        margin-top: 56px;
+        margin-left: 0;
+        margin-right: 0;
+        color: white;
+        width: 100%;
+        background: rgba(16, 16, 16, 0.8);
+        padding-top: 16px;
+    }
+
+    .firstCard {
+        background-image: url(../images/otsolutions.jpg);
+        width: 100%;
+        background-size: cover;
+    }
+
+    .wtransnetCard {
+        background-image: url(../images/wtransnet.jpg);
+        width: 100%;
+        background-size: cover;
+    }
+
+    .wabbi-card {
+        background-image: url(../images/wabi.jpg);
+        width: 100%;
+        background-size: cover;
+        padding: 0;
+    }
+
+    .displayNone {
+        display: none;
+    }
+
+    .third-content-b {
+        display: none;
+    }
+
+    .card-body-custom {
+        text-align: center;
+        padding-top: 16px;
+    }
+
+    .card-body-rgba {
+        background: rgba(16, 16, 16, 0.8);
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .overSection {
+        margin-top: 15px;
+        z-index: 0;
+    }
+
+    .card-body-custom-1 {
+        text-align: center;
+        margin: 25px 10px 20px 10px;
+        padding-bottom: 30px;
+    }
+
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+        border-color: #101010;
+        background-color: #080226;
+    }
+
 }

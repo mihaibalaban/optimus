@@ -30,7 +30,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Html::img('@web/images/logo-menu.gif', ['alt' => Yii::$app->name]),
+        'brandLabel' => Html::img('@web/images/logo-menu.gif', ['alt' => Yii::$app->name,  'class'=> 'menuLogo']),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top hideMenu',

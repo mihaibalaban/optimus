@@ -24,11 +24,11 @@ $this->title = 'Optimus Transport';
         </div>
     </section>
     <div class="container">
-        <div class="contentPadding overSectionPartners">
+        <div class="contentPadding overSectionPartners overOnOneThousand">
             <div class="paddingBigElements">
                 <div data-type="background" data-speed="6">
-                    <div class="row" style="max-height: 576px;">
-                        <div class="col-lg-7 col-md-7 secondSectionPartners">
+                    <div class="row firstCardPartners">
+                        <div class="col-lg-7 col-md-7 no-padding secondSectionPartners">
                             <div class=" part">
 
                                 <p> Optimus Transport este partenerul ideal in promovarea serviciilor
@@ -59,7 +59,7 @@ $this->title = 'Optimus Transport';
 
                             </div>
                         </div>
-                        <div class="col-lg-5 col-md-5">
+                        <div class="col-lg-5 col-md-5 no-padding displayNonePartners">
                             <img class="partnersSecondSection-image" src="images/secondSection-partners.jpg">
                         </div>
 
@@ -70,12 +70,11 @@ $this->title = 'Optimus Transport';
 
             <div class=" paddingBigElements">
                 <div class="image" data-type="background" data-speed="6">
-                    <div class="stufff" data-type="content">
 
-                        <div class="row" style="height: 100%;">
+                        <div class="row no-padding">
 
-                            <div class="col-lg-3">
-                                <div class="card firstCard">
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <div class="card bottomPartPartners">
 
                                     <!--Card image-->
                                     <img class="img-fluid fitIn" src="images/ot-partners.jpg">
@@ -88,8 +87,8 @@ $this->title = 'Optimus Transport';
 
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="card firstCard">
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <div class="card bottomPartPartners">
 
                                     <!--Card image-->
                                     <img class="img-fluid fitIn" src="images/wtransnet-partners.jpg">
@@ -102,8 +101,8 @@ $this->title = 'Optimus Transport';
 
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="card firstCard">
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <div class="card bottomPartPartners">
 
                                     <!--Card image-->
                                     <img class="img-fluid fitIn" src="images/wconecta-partners.jpg">
@@ -116,8 +115,8 @@ $this->title = 'Optimus Transport';
 
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="card firstCard">
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <div class="card bottomPartPartners">
 
                                     <!--Card image-->
                                     <img class="img-fluid fitIn" src="images/wabi-partners.jpg">
@@ -133,7 +132,6 @@ $this->title = 'Optimus Transport';
 
 
                         </div>
-                    </div>
                 </div>
             </div>
 
