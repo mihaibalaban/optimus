@@ -28,7 +28,7 @@ $this->title = 'My Yii Application';
                             <div class="card firstCard">
 
                                 <!--Card image-->
-                                <img class="img-fluid fitIn displayNone" src="images/otsolutions.jpg">
+                                <img class="img-fluid fitIn displayNone" style="height: 100%" src="images/otsolutions.jpg">
                                 <!--Card content-->
                                 <div class="card-body-rgba">
                                     <div class="card-body card-body-custom paddingLeft">
@@ -60,14 +60,14 @@ $this->title = 'My Yii Application';
                                                     <h3> SERVICII DE BURSA TRANSPORT VIA</h3>
                                                 </div>
                                                 <div class="row">
-                                                    <img class="img-fluid " src="images/logo-wtransnet.gif"
+                                                    <img class="img-fluid" src="images/logo-wtransnet.gif"
                                                          alt="Card image cap">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--Card image-->
-                                    <img class="img-fluid fitIn displayNone" src="images/wtransnet.jpg"
+                                    <img class="img-fluid fitIn displayNone"  style="height: 100%" src="images/wtransnet.jpg"
                                          alt="Card image cap">
 
                                     <!--Card content-->

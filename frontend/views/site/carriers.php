@@ -38,12 +38,11 @@ $this->title = 'Optimus Transport';
     <div class="container">
         <div class="contentPadding">
             <div class="paddingBigElements">
-                <div data-type="background" data-speed="6">
                     <div class="row" style="max-height: 400px;">
-                        <div class="col-lg-7 col-md-7" style="padding-right: 0;">
+                        <div class="col-lg-7 col-md-7 col-sm-7" style="padding-right: 0;">
                             <img class="carriersSecondSection-image" src="images/carriersFirstImage.jpg">
                         </div>
-                        <div class="col-lg-5 col-md-5 secondSectionPartners">
+                        <div class="col-lg-5 col-md-5 col-sm-5 secondSectionPartners">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <h4>INBOUND SALES</h4>
@@ -69,12 +68,11 @@ $this->title = 'Optimus Transport';
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
             <div class=" paddingBigElements">
                 <div class="image" data-type="background" data-speed="6">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
                             <h3>INTERNSHIPS</h3>
                             <p>Suntem implicati in mod activ in procesul educational al studentilor din Romania, iar
                                 programul nostru de internship asigura in permanenta cate doua locuri doritorilor.
@@ -83,7 +81,7 @@ $this->title = 'Optimus Transport';
                             <a href="#" class="btn btn-primary moreButton">Aplica</a>
 
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-6 col-sm-12" style="    text-align: center;">
                             <div class="circleCarriers">
                                 <img src="images/carriers-circle.gif"
                                      alt="wtrasnet-logo" class="img-responsive">
@@ -93,11 +91,11 @@ $this->title = 'Optimus Transport';
                 </div>
             </div>
             <div class="paddingBigElements">
-                    <div class="row" style="height: 564px;">
-                        <div class="col-lg-5 col-md-5" style="height: 564px;">
+                    <div class="row" style="height: 760px;">
+                        <div class="col-lg-5 col-md-5 col-sm-5" style="height: 564px;">
                             <img class="partnersSecondSection-image" src="images/carrier-freelance.jpg">
                         </div>
-                        <div class="col-lg-7 col-md-7 secondSectionPartners" style="height: 564px;">
+                        <div class="col-lg-7 col-md-7 col-sm-7 secondSectionPartners" style="height: 564px;">
                             <div class=" part">
                                 <h4>FREELANCE REPRESENTATIVE (WTRANSNET)</h4>
                                 <p>Acesta reprezinta proiectul nostru dedicat Expeditorilor Caselor de Expeditii din

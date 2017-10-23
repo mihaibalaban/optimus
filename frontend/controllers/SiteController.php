@@ -2,6 +2,8 @@
 
 namespace frontend\controllers;
 
+use frontend\models\Countryes;
+use frontend\models\Routes;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -88,7 +90,15 @@ class SiteController extends Controller
 
     public function actionServices()
     {
-        return $this->render('services');
+        $countryes = Countryes::find()->all();
+        $routes = [];
+        foreach ($countryes as $c) {
+            $routes[] = ['routes'=>[ Routes::find()->asArray()->where(['country_id' =>1])->all()],'country'=>['id' => $c->id, 'name' => $c->country_name]];
+        }
+
+        return $this->render('services',[
+            'routes'=>$routes
+        ]);
     }
 
     /**

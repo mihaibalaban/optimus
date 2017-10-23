@@ -14,16 +14,16 @@ $this->title = 'My Yii Application';
         </div>
         <div class="stuff" data-type="content">
             <div class="row verticalAllign">
-                <div class="col-lg-3 rowOfImages">
-                    <img class="img-fluid homeOtSol" src="images/logootsol.gif">
+                <div class="col-lg-3 col-xs-12 rowOfImages">
+                    <img class="    img-fluid homeOtSol" src="images/logootsol.gif">
                 </div>
-                <div class="col-lg-3 rowOfImages">
+                <div class="col-lg-3 col-xs-12 rowOfImages">
                     <img class="img-fluid" src="images/logo-wtransnet.gif" alt="Card image cap">
                 </div>
-                <div class="col-lg-3 rowOfImages">
+                <div class="col-lg-3 col-xs-12 rowOfImages">
                     <img class="img-fluid" src="images/logo_w_connecta.gif" alt="Card image cap">
                 </div>
-                <div class="col-lg-3 rowOfImages">
+                <div class="col-lg-3 col-xs-12 rowOfImages">
                     <img src="images/logo-wabi.gif">
                 </div>
             </div>
@@ -33,12 +33,12 @@ $this->title = 'My Yii Application';
     <div class="container">
         <div class="contentPadding">
             <div class="paddingBigElements">
-                <div class="card firstCard">
+                <div class="card serviciiFirstCard">
 
-                    <div class="secondTab">
-                        <img class="img-fluid fitIn" src="images/ship_left.jpg">
+                    <div class="secondTab secondTabb1 ">
+                        <img class="img-fluid fitIn displayNone" style="height: 100%" src="images/ship_left.jpg">
                         <img id="image" class="img-fluid homeOtSol" src="images/logootsol.gif">
-                        <p id="text">
+                        <p id="text" class="serviciiFirstText">
                             Este o agentie de rezervari feribot pentru vehicule comerciale cu sediul in Ruse,
                             Bulgaria.
                             Va
@@ -58,52 +58,58 @@ $this->title = 'My Yii Application';
                         <div class="row">
 
                             <div class="col-lg-3">
-                                <div class="author_bio_toggle_wrapper">
-                                    <a href="#0" id="author_bio_wrap_toggleAnglia"
-                                       class="btn  btn-sm btnExpand">Anglia</a>
+                                <?php
+                                foreach ($routes as $r){
+                                    ?>
+                                    <div class="author_bio_toggle_wrapper">
+                                        <a href="#0" id="<?= "author_bio_wrap_toggle".$r['country']['id'] ?>"
+                                           class="btn  btn-sm btnExpand"><?= $r['country']['name']?></a>
+                                    </div>
+
+
+                                <div id="<?= "author_bio_wrap".$r['country']['id'] ?>" style="display: none;">
+                                    <?php
+
+                                    foreach ($r['routes'][0] as $route){
+                                    ?>
+                                        <p><?= $route['route_name']?></p>
+                                    <?php
+                                    }?>
                                 </div>
-                                <div id="author_bio_wrap" style="display: none;">
-                                    <p>Calais-Dover</p>
-                                    <p>Dunkerque-Dover</p>
-                                    <p>Calais-Folkestone</p>
-                                    <p>Hoek V Holland-Harwich</p>
-                                    <p>Hoek V Holland-Killingholme</p>
-                                    <p>Dieppe-Newhaven</p>
-                                    <p>Portsmouth-Fishbourne (Isle of Wight)</p>
-                                    <p>Lymington-Yarmouth (Isle of Wight)</p>
-                                </div>
+
+                                    <?php
+                                }?>
+
                             </div>
                         </div>
 
                     </div>
                     <div class="card-body card-body-custom-second whiteCollor">
                         <div class="row" style="text-align: center;">
-                            <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="col-lg-3 col-md-4 col-sm-4 just-for-small">
                                 <p id="circle"><img
                                             src="images/phone.gif"
                                             alt="otsolutions" class="img-responsive"></p>
-                                <p>Preturi mai mici cu pana la 40% fata de cele online sau de cele din
-                                    port;</p>
+                                <p>Preturi mai mici cu pana la 40% fata de cele online sau de cele din port;</p>
 
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6">
+                            <div class="col-lg-2 col-md-4 col-sm-4 just-for-small">
                                 <p id="circle"><img
                                             src="images/calendar.gif"
                                             alt="otsolutions" class="img-responsive"></p>
                                 <p>Disponibilitate si suport<br>
                                     24 ore/24, 7 zile/7;</p></div>
-                            <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="col-lg-2 col-md-4 col-sm-4 just-for-small">
                                 <p id="circle"><img
                                             src="images/note.gif"
                                             alt="otsolutions" class="img-responsive"></p>
                                 <p>Facturare la valoare neta din Bulgaria;</p></div>
-
-                            <div class="col-lg-2 col-md-6 col-sm-12">
+                            <div class="col-lg-2 col-md-6 col-sm-6 just-for-small">
                                 <p id="circle"><img
                                             src="images/cash.gif"
                                             alt="otsolutions" class="img-responsive"></p>
                                 <p>Flexibilitate din punct de vedere al monedei;</p></div>
-                            <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="col-lg-3 col-md-6 col-sm-6 just-for-small">
                                 <p id="circle"><img
                                             src="images/agreed.gif"
                                             alt="otsolutions" class="img-responsive"></p>
@@ -132,10 +138,10 @@ $this->title = 'My Yii Application';
             </div>
 
             <div class="paddingBigElements">
-                <div class="secondTab">
-                    <img class="img-fluid fitIn" src="images/poza-wtransnet.jpg">
+                <div class="secondTab secondTabb2">
+                    <img class="img-fluid fitIn displayNone" style="height: 100%" src="images/poza-wtransnet.jpg">
                     <img id="image" class="img-fluid homeOtSol" src="images/logo-wtransnet.gif">
-                    <p id="text">
+                    <p id="text" class="serviciiFirstText">
                         Este o agentie de rezervari feribot pentru vehicule comerciale cu sediul in Ruse, Bulgaria.
                         Va
                         poate
@@ -180,16 +186,16 @@ $this->title = 'My Yii Application';
 
             <div class="paddingBigElements">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <img class="img-fluid fitIn" src="images/servicesTab5.jpg">
+                    <div class="col-lg-6 col-md-12">
+                        <img class="img-fluid fitIn displayNone" src="images/servicesTab5.jpg">
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-12">
                         <div class="sixElements">
                             <div class="titleQuestionner">
                                 <p class="titleSection5">Ce ofera Wtransnet?</p>
                             </div>
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="elementFromSix">
                                         <b>Garantia platii</b>
                                         <p> – un serviciu <b>UNIC in Europa</b> ce va ofera
@@ -198,7 +204,7 @@ $this->title = 'My Yii Application';
                                             incasarea a 90% din valoarea facturii transportului.</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="elementFromSix">
                                         <p><b>Matching System</b> – sunteti notificat automat prin e-mail/aplicatie
                                             telefon
@@ -210,7 +216,7 @@ $this->title = 'My Yii Application';
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="elementFromSix">
                                         <p><b>White List</b> – acces la o lista ce contine casele de expeditii care
                                             si-au luat
@@ -218,7 +224,7 @@ $this->title = 'My Yii Application';
                                             zile.</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="elementFromSix">
                                         <p><b>Companies Information Service</b> – va punem la dispozitie informatii
                                             despre
@@ -227,7 +233,7 @@ $this->title = 'My Yii Application';
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="elementFromSix">
                                         <p><b>Business Assistant (Asistent personal)</b> – ca membru vi se aloca un
                                             asistent
@@ -236,7 +242,7 @@ $this->title = 'My Yii Application';
                                             toate instrumentele oferite de Wtransnet.</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="elementFromSix">
                                         <p><b>Associate Searcher</b> – este un motor intern de cautare, acesta ofera
                                             posibilitatea ca membrii bursei sa filtreze companiile inregistrate in
@@ -255,9 +261,9 @@ $this->title = 'My Yii Application';
             <div class="paddingBigElements">
 
                 <div class="secondTab">
-                    <img class="img-fluid fitIn" src="images/wconnecta-banner.jpg">
+                    <img class="img-fluid fitIn smallWidth" style="height: 100%" src="images/wconnecta-banner.jpg">
                     <img id="image" class="img-fluid homeOtSol" src="images/wconecta-logo.gif">
-                    <p id="text">
+                    <p id="text" class="oneThousandWidth">
                         Ce este Wconnecta?
                         Wconnecta este un proiect proeminent, care dupa 7 editii, a devenit un eveniment cu un
                         impact puternic in randul companiilor din domeniul transporturilor la nivel European. Scopul
@@ -271,12 +277,14 @@ $this->title = 'My Yii Application';
                     <!--Card content-->
                     <div class="card-body card-body-custom-third">
                         <div class="row">
-                            <div class="col-lg-7">
-                                <iframe width="600" height="375" src="https://www.youtube.com/embed/2jf6wg6Dc7M"
+                            <div id="first" class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                                <iframe class="youtubeIframe" width="600" height="375"
+                                        src="https://www.youtube.com/embed/2jf6wg6Dc7M"
                                         frameborder="0"></iframe>
                             </div>
-                            <div class="col-lg-5 wconectaText">
-                                <p>In 2016, Wconnecta a atras peste 1000 de participanti de la peste 500 de
+                            <div id="second" class="col-lg-5 col-md-5 col-sm-5 col-xs-12 wconectaText">
+                                <p id="text" class="serviciiTextVideo">In 2016, Wconnecta a atras peste 1000 de
+                                    participanti de la peste 500 de
                                     companii, din 23 de tari diferite, cu 32% mai mult ca editia anterioara
                                     acesteia. Vezi prezentarea video aici.
 
@@ -297,9 +305,9 @@ $this->title = 'My Yii Application';
             <div class="paddingBigElements lastElementServicii">
                 <div class="secondTab">
 
-                    <img class="img-fluid fitIn" src="images/wabi-banner.jpg">
-                    <img id="image" class="img-fluid homeOtSol" src="images/logo-wabi.gif">
-                    <p id="text">
+                    <img class="img-fluid fitIn wabiImgLastServicii" style="height: 100%" src="images/wabi-banner.jpg">
+                    <img id="image" class="img-fluid homeOtSol minWidthWabi" src="images/logo-wabi.gif">
+                    <p id="text" class="minWidthWabiText">
                         WA-BI va pune la dispozitie servicii de dezvoltare WEB, optimizare SEO, securizarea bazelor
                         de
                         date, mentenanta si dezvoltare aplicatii. Va oferim consultanta si ne asiguram ca veti
@@ -316,6 +324,15 @@ $this->title = 'My Yii Application';
 </div>
 
 <script>// Hide Header on on scroll down
+
+    $(window).resize(function () {
+        if ($(window).width() <= 768) {
+            $("#first").insertAfter("#second");
+        }
+    })
+    if ($(window).width() <= 768) {
+        $("#first").insertAfter("#second");
+    }
     var didScroll;
     var lastScrollTop = 0;
     var delta = 6;
@@ -356,8 +373,9 @@ $this->title = 'My Yii Application';
 
     var expandID = [1, 2, 3, 4, 5, 6, 7];
 
-    $("#author_bio_wrap_toggleAnglia").click(function () {
-        $("#author_bio_wrap").slideToggle("fast");
+    $("#author_bio_wrap_toggle1").click(function () {
+        $("#author_bio_wrap1").slideToggle("fast");
 
     });
+
 </script>

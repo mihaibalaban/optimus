@@ -77,7 +77,7 @@ $this->title = 'Optimus Transport';
                                 <div class="card bottomPartPartners">
 
                                     <!--Card image-->
-                                    <img class="img-fluid fitIn" src="images/ot-partners.jpg">
+                                    <img class="img-fluid fitIn" style="height: 100%" src="images/ot-partners.jpg">
                                     <!--Card content-->
                                     <div class="card-body cardPartners paddingLeft">
                                         <!--Title-->
@@ -91,7 +91,7 @@ $this->title = 'Optimus Transport';
                                 <div class="card bottomPartPartners">
 
                                     <!--Card image-->
-                                    <img class="img-fluid fitIn" src="images/wtransnet-partners.jpg">
+                                    <img class="img-fluid fitIn" style="height: 100%" src="images/wtransnet-partners.jpg">
                                     <!--Card content-->
                                     <div class="card-body cardPartners paddingLeft">
                                         <!--Title-->
@@ -105,7 +105,7 @@ $this->title = 'Optimus Transport';
                                 <div class="card bottomPartPartners">
 
                                     <!--Card image-->
-                                    <img class="img-fluid fitIn" src="images/wconecta-partners.jpg">
+                                    <img class="img-fluid fitIn" style="height: 100%" src="images/wconecta-partners.jpg">
                                     <!--Card content-->
                                     <div class="card-body cardPartners paddingLeft">
                                         <!--Title-->
@@ -119,7 +119,7 @@ $this->title = 'Optimus Transport';
                                 <div class="card bottomPartPartners">
 
                                     <!--Card image-->
-                                    <img class="img-fluid fitIn" src="images/wabi-partners.jpg">
+                                    <img class="img-fluid fitIn" style="height: 100%" src="images/wabi-partners.jpg">
                                     <!--Card content-->
                                     <div class="card-body cardPartners paddingLeft">
                                         <!--Title-->
