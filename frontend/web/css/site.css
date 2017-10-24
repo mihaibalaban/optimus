@@ -376,14 +376,33 @@ a:hover, a:focus {
     height: -webkit-fill-available;
 }
 
+.secondSectionCarriers{
+    background-color: #9e0b0f;
+    height: -webkit-fill-available;
+}
+
 .partnersSecondSection-image {
     background-size: cover;
     width: 100%;
 }
 
 .carriersSecondSection-image {
-    width: auto;
+    width: 100%;
     height: -webkit-fill-available;
+    object-fit: cover;
+    max-height: 300px;
+}
+
+.rightCarriers{
+    text-align: center;
+}
+
+.overTextCarriers{
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    top: 3%;
 }
 
 .customSectionPartners {
@@ -1272,6 +1291,7 @@ p {
 
     .firstCardPartners {
         max-height: 100%;
+        height: 757px;
     }
 
     /*.secondSectionPartners {*/
@@ -1325,6 +1345,12 @@ p {
 
 }
 
+.greyScaleBackground{
+    background: rgba(16, 16, 16, 0.8);
+    width: 100%;
+    height: 100%;
+}
+
 @media only screen and (max-width: 768px) {
 
     .paddingLeft {
@@ -1332,9 +1358,17 @@ p {
     }
 
     .secondSectionPartners {
-         background-color: transparent;
+        height: -webkit-fill-available;
+        /*top: -564px;*/
+        background: rgba(16, 16, 16, 0.8);
+        /*margin: 0 15px 0 15px;*/
+    }
+
+    .secondSectionCarriers{
         height: -webkit-fill-available;
         top: -564px;
+        background: rgba(16, 16, 16, 0.8);
+        margin: 0 15px 0 15px;
     }
 
     .partnersSecondSection-image {
@@ -1363,7 +1397,7 @@ p {
     }
 
     .footerImage {
-        height: 100px!important;
+        height: 71px!important;
     }
 
     .secondTabb1 {
@@ -1413,6 +1447,7 @@ p {
         background-image: url(../images/wconnecta.jpg);
         background-size: cover;
         padding: 0;
+        border-radius: 0;
     }
 
     .wc {

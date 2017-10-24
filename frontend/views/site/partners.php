@@ -69,25 +69,9 @@ $this->title = 'Optimus Transport';
             </div>
 
             <div class=" paddingBigElements">
-                <div class="image" data-type="background" data-speed="6">
-
                         <div class="row no-padding">
 
-                            <div class="col-lg-3 col-md-3 col-sm-6">
-                                <div class="card bottomPartPartners">
-
-                                    <!--Card image-->
-                                    <img class="img-fluid fitIn" style="height: 100%" src="images/ot-partners.jpg">
-                                    <!--Card content-->
-                                    <div class="card-body cardPartners paddingLeft">
-                                        <!--Title-->
-                                        <img class="img-fluid homeOtSol" src="images/logootsol.gif">
-                                        <!--Text-->
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 test" style="padding: 15px;">
                                 <div class="card bottomPartPartners">
 
                                     <!--Card image-->
@@ -101,7 +85,21 @@ $this->title = 'Optimus Transport';
 
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 test" style="padding: 15px;">
+                                <div class="card bottomPartPartners">
+
+                                    <!--Card image-->
+                                    <img class="img-fluid fitIn" style="height: 100%" src="images/ot-partners.jpg">
+                                    <!--Card content-->
+                                    <div class="card-body cardPartners paddingLeft">
+                                        <!--Title-->
+                                        <img class="img-fluid homeOtSol" src="images/logootsol.gif">
+                                        <!--Text-->
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 test" style="padding: 15px;">
                                 <div class="card bottomPartPartners">
 
                                     <!--Card image-->
@@ -115,7 +113,7 @@ $this->title = 'Optimus Transport';
 
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 test" style="padding:15px;">
                                 <div class="card bottomPartPartners">
 
                                     <!--Card image-->
@@ -132,7 +130,6 @@ $this->title = 'Optimus Transport';
 
 
                         </div>
-                </div>
             </div>
 
 

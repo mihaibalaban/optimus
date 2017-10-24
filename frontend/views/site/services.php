@@ -36,20 +36,22 @@ $this->title = 'My Yii Application';
                 <div class="card serviciiFirstCard">
 
                     <div class="secondTab secondTabb1 ">
-                        <img class="img-fluid fitIn displayNone" style="height: 100%" src="images/ship_left.jpg">
-                        <img id="image" class="img-fluid homeOtSol" src="images/logootsol.gif">
-                        <p id="text" class="serviciiFirstText">
-                            Este o agentie de rezervari feribot pentru vehicule comerciale cu sediul in Ruse,
-                            Bulgaria.
-                            Va
-                            poate
-                            fi de foarte mare ajutor in a economisi bani la cursele dvs. in tari ce necesita o
-                            traversare cu
-                            feribotul, intrucat OT SOLUTIONS are parteneriate directe cu principalii operatori
-                            maritimi
-                            din
-                            partea Nordica a Europei.
-                        </p>
+                        <div class="greyScaleBackground">
+                            <img class="img-fluid fitIn displayNone" style="height: 100%" src="images/ship_left.jpg">
+                            <img id="image" class="img-fluid homeOtSol" src="images/logootsol.gif">
+                            <p id="text" class="serviciiFirstText">
+                                Este o agentie de rezervari feribot pentru vehicule comerciale cu sediul in Ruse,
+                                Bulgaria.
+                                Va
+                                poate
+                                fi de foarte mare ajutor in a economisi bani la cursele dvs. in tari ce necesita o
+                                traversare cu
+                                feribotul, intrucat OT SOLUTIONS are parteneriate directe cu principalii operatori
+                                maritimi
+                                din
+                                partea Nordica a Europei.
+                            </p>
+                        </div>
                     </div>
 
                     <!--Card content-->
@@ -59,26 +61,26 @@ $this->title = 'My Yii Application';
 
                             <div class="col-lg-3">
                                 <?php
-                                foreach ($routes as $r){
+                                foreach ($routes as $r) {
                                     ?>
                                     <div class="author_bio_toggle_wrapper">
-                                        <a href="#0" id="<?= "author_bio_wrap_toggle".$r['country']['id'] ?>"
-                                           class="btn  btn-sm btnExpand"><?= $r['country']['name']?></a>
+                                        <a href="#0" id="<?= "author_bio_wrap_toggle" . $r['country']['id'] ?>"
+                                           class="btn  btn-sm btnExpand"><?= $r['country']['name'] ?></a>
                                     </div>
 
 
-                                <div id="<?= "author_bio_wrap".$r['country']['id'] ?>" style="display: none;">
-                                    <?php
+                                    <div id="<?= "author_bio_wrap" . $r['country']['id'] ?>" style="display: none;">
+                                        <?php
 
-                                    foreach ($r['routes'][0] as $route){
-                                    ?>
-                                        <p><?= $route['route_name']?></p>
-                                    <?php
-                                    }?>
-                                </div>
+                                        foreach ($r['routes'][0] as $route) {
+                                            ?>
+                                            <p><?= $route['route_name'] ?></p>
+                                            <?php
+                                        } ?>
+                                    </div>
 
                                     <?php
-                                }?>
+                                } ?>
 
                             </div>
                         </div>
@@ -139,19 +141,21 @@ $this->title = 'My Yii Application';
 
             <div class="paddingBigElements">
                 <div class="secondTab secondTabb2">
-                    <img class="img-fluid fitIn displayNone" style="height: 100%" src="images/poza-wtransnet.jpg">
-                    <img id="image" class="img-fluid homeOtSol" src="images/logo-wtransnet.gif">
-                    <p id="text" class="serviciiFirstText">
-                        Este o agentie de rezervari feribot pentru vehicule comerciale cu sediul in Ruse, Bulgaria.
-                        Va
-                        poate
-                        fi de foarte mare ajutor in a economisi bani la cursele dvs. in tari ce necesita o
-                        traversare cu
-                        feribotul, intrucat OT SOLUTIONS are parteneriate directe cu principalii operatori maritimi
-                        din
-                        partea Nordica a Europei.
-                    </p>
+                    <div class="greyScaleBackground">
+                        <img class="img-fluid fitIn displayNone" style="height: 100%" src="images/poza-wtransnet.jpg">
+                        <img id="image" class="img-fluid homeOtSol" src="images/logo-wtransnet.gif">
+                        <p id="text" class="serviciiFirstText">
+                            Este o agentie de rezervari feribot pentru vehicule comerciale cu sediul in Ruse, Bulgaria.
+                            Va
+                            poate
+                            fi de foarte mare ajutor in a economisi bani la cursele dvs. in tari ce necesita o
+                            traversare cu
+                            feribotul, intrucat OT SOLUTIONS are parteneriate directe cu principalii operatori maritimi
+                            din
+                            partea Nordica a Europei.
+                        </p>
 
+                    </div>
                 </div>
 
             </div>
@@ -261,7 +265,9 @@ $this->title = 'My Yii Application';
             <div class="paddingBigElements">
 
                 <div class="secondTab">
-                    <img class="img-fluid fitIn smallWidth" style="height: 100%" src="images/wconnecta-banner.jpg">
+                    <div class="greyScaleBackground">
+                        <img class="img-fluid fitIn smallWidth" style="height: 100%" src="images/wconnecta-banner.jpg">
+                    </div>
                     <img id="image" class="img-fluid homeOtSol" src="images/wconecta-logo.gif">
                     <p id="text" class="oneThousandWidth">
                         Ce este Wconnecta?

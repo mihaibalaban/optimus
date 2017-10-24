@@ -38,36 +38,30 @@ $this->title = 'Optimus Transport';
     <div class="container">
         <div class="contentPadding">
             <div class="paddingBigElements">
-                    <div class="row" style="max-height: 400px;">
-                        <div class="col-lg-7 col-md-7 col-sm-7" style="padding-right: 0;">
-                            <img class="carriersSecondSection-image" src="images/carriersFirstImage.jpg">
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-sm-5 secondSectionPartners">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <h4>INBOUND SALES</h4>
-                                </div>
-                                <div class="col-lg-6">
-                                    <h4>CUSTOMER SUPPORT REPRESENTATIVE</h4>
-                                </div>
-                                <div class="col-lg-12">
-                                    <a href="#" class="btn btn-primary moreButton">Aplica</a>
-                                </div>
-                                <div class="col-lg-6">
-                                    <h4>AGENT
-                                        <VANZARI></VANZARI>
-                                    </h4>
-                                </div>
-                                <div class="col-lg-6">
-                                    <h4>CUSTOMER SUPPORT</h4>
-                                </div>
-                                <div class="col-lg-12">
-                                    <a href="#" class="btn btn-primary moreButton">Uploadeaza CV</a>
-                                </div>
+                <div style="padding-right: 0;">
+                    <img class="carriersSecondSection-image" src="images/hamburg.jpg">
 
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 overTextCarriers">
+                            <h4 style="text-align: center">Alaturate echipei naostre</h4>
+                            <div style="text-align: center">
+                                <div class="dropdown">
+                                    <button style="color: black" class="btn btn-default dropdown-toggle"
+                                            type="button" id="dropdownMenu1" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="true">
+                                        Dropdown
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                        <li><a href="#">INBOUND SALES AGENT</a></li>
+                                        <li><a href="#">CUSTOMER SUPPORT REPRESENTATIVE</a></li>
+                                    </ul>
+                                </div>
                             </div>
+                            <a href="#" class="btn btn-primary moreButton">Uploadeaza CV</a>
                         </div>
                     </div>
+                </div>
             </div>
             <div class=" paddingBigElements">
                 <div class="image" data-type="background" data-speed="6">
@@ -91,32 +85,32 @@ $this->title = 'Optimus Transport';
                 </div>
             </div>
             <div class="paddingBigElements">
-                    <div class="row" style="height: 760px;">
-                        <div class="col-lg-5 col-md-5 col-sm-5" style="height: 564px;">
-                            <img class="partnersSecondSection-image" src="images/carrier-freelance.jpg">
-                        </div>
-                        <div class="col-lg-7 col-md-7 col-sm-7 secondSectionPartners" style="height: 564px;">
-                            <div class=" part">
-                                <h4>FREELANCE REPRESENTATIVE (WTRANSNET)</h4>
-                                <p>Acesta reprezinta proiectul nostru dedicat Expeditorilor Caselor de Expeditii din
-                                    Romania. Fiecare companie care ajunge sa se inregistreze din recomandarea ta
-                                    primeste un discount la abonamentul serviciilor Wtransnet, iar tu primesti comision
-                                    la fiecare client inregistrat.</p>
+                <div class="row" style="height: 760px;">
+                    <div class="col-lg-5 col-md-5 col-sm-5" style="height: 564px;">
+                        <img class="partnersSecondSection-image" src="images/carrier-freelance.jpg">
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7 secondSectionCarriers" >
+                        <div class=" part">
+                            <h4>FREELANCE REPRESENTATIVE (WTRANSNET)</h4>
+                            <p>Acesta reprezinta proiectul nostru dedicat Expeditorilor Caselor de Expeditii din
+                                Romania. Fiecare companie care ajunge sa se inregistreze din recomandarea ta
+                                primeste un discount la abonamentul serviciilor Wtransnet, iar tu primesti comision
+                                la fiecare client inregistrat.</p>
 
-                                <p><b>Cum functioneaza?</b> Este optional. Nu ai target. Primesti comision/client. Te
-                                    poti opri
-                                    oricand. Presupune identificarea potentialilor clienti ai serviciului de bursa,
-                                    Wtransnet. Operatorului i se ofera un training de baza pentru acest serviciu. Pe
-                                    scurt, treaba unui Freight Operator este sa recomande Wtransnet companiilor cu care
-                                    interactioneaza, iar de restul ne ocupam noi!</p>
+                            <p><b>Cum functioneaza?</b> Este optional. Nu ai target. Primesti comision/client. Te
+                                poti opri
+                                oricand. Presupune identificarea potentialilor clienti ai serviciului de bursa,
+                                Wtransnet. Operatorului i se ofera un training de baza pentru acest serviciu. Pe
+                                scurt, treaba unui Freight Operator este sa recomande Wtransnet companiilor cu care
+                                interactioneaza, iar de restul ne ocupam noi!</p>
 
-                                <p><b> Care este comisionul tau?</b></p>
+                            <p><b> Care este comisionul tau?</b></p>
 
-                                <p>Acesta variaza in functie de tipul de client, insa va fi intre minim 10 – maxim 30
-                                    de EUR/inregistrare.</p>
-                            </div>
+                            <p>Acesta variaza in functie de tipul de client, insa va fi intre minim 10 – maxim 30
+                                de EUR/inregistrare.</p>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
