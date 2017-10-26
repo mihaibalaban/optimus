@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use frontend\models\Countryes;
 use frontend\models\Routes;
+use frontend\models\UploadCvForm;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -15,6 +16,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use yii\web\UploadedFile;
 
 /**
  * Site controller
@@ -85,7 +87,21 @@ class SiteController extends Controller
 
     public function actionCarriers()
     {
-        return $this->render('carriers');
+
+        $model = new UploadCvForm();
+        if (Yii::$app->request->isPost) {
+            $model->cvFile = UploadedFile::getInstance($model, 'cvFile');
+            $model->upload();
+            if ($model->upload()) {
+                return $this->render('carriers', [
+                    'model' => $model
+                ]);
+            }
+        } else {
+            return $this->render('carriers', [
+                'model' => $model
+            ]);
+        }
     }
 
     public function actionServices()
@@ -93,11 +109,11 @@ class SiteController extends Controller
         $countryes = Countryes::find()->all();
         $routes = [];
         foreach ($countryes as $c) {
-            $routes[] = ['routes'=>[ Routes::find()->asArray()->where(['country_id' =>1])->all()],'country'=>['id' => $c->id, 'name' => $c->country_name]];
+            $routes[] = ['routes' => [Routes::find()->asArray()->where(['country_id' => $c->id])->all()], 'country' => ['id' => $c->id, 'name' => $c->country_name]];
         }
-
-        return $this->render('services',[
-            'routes'=>$routes
+//            var_dump($routes);die;
+        return $this->render('services', [
+            'routes' => $routes
         ]);
     }
 

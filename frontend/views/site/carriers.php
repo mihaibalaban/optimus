@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use kartik\file\FileInput;
 
 ?>
 
@@ -12,6 +13,7 @@ use yii\helpers\Html;
 
 use kartik\tabs\TabsX;
 use yii\bootstrap\Button;
+use yii\widgets\ActiveForm;
 
 $this->title = 'Optimus Transport';
 ?>
@@ -41,24 +43,32 @@ $this->title = 'Optimus Transport';
                 <div style="padding-right: 0;">
                     <img class="carriersSecondSection-image" src="images/hamburg.jpg">
 
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 overTextCarriers">
-                            <h4 style="text-align: center">Alaturate echipei naostre</h4>
-                            <div style="text-align: center">
-                                <div class="dropdown">
-                                    <button style="color: black" class="btn btn-default dropdown-toggle"
-                                            type="button" id="dropdownMenu1" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="true">
-                                        Dropdown
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="#">INBOUND SALES AGENT</a></li>
-                                        <li><a href="#">CUSTOMER SUPPORT REPRESENTATIVE</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-primary moreButton">Uploadeaza CV</a>
+                    <div class=" overTextCarriers" style="text-align: -webkit-center;">
+                        <h4 style="text-align: center">Alaturate echipei naostre</h4>
+                        <div class="uploadFile">
+                            <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
+
+                            <?= $form->field($model, 'cvFile')->label(false)->widget(FileInput::classname(), [
+                                'options' => ['multiple' => false],
+                                'language' => 'en',
+                                'pluginOptions' => [
+                                    'initialCaption' => "Selecteaza Cv",
+                                    'showUpload' => false,
+                                    'showCancel' => false,
+                                    'showPreview' => false,
+                                    'showRemove' => false,
+                                    'browseLabel' => 'Cauta CV',
+//                                        'removeLabel' => '',
+                                    'mainClass' => 'input-group-lg',
+                                    'fileActionSettings' => [
+                                        'showZoom' => false,
+                                    ],
+                                ]
+                            ]); ?>
+
+                            <button class="btn btn-primary moreButton">Uploadeaza CV</button>
+
+                            <?php ActiveForm::end() ?>
                         </div>
                     </div>
                 </div>
@@ -89,7 +99,7 @@ $this->title = 'Optimus Transport';
                     <div class="col-lg-5 col-md-5 col-sm-5" style="height: 564px;">
                         <img class="partnersSecondSection-image" src="images/carrier-freelance.jpg">
                     </div>
-                    <div class="col-lg-7 col-md-7 col-sm-7 secondSectionCarriers" >
+                    <div class="col-lg-7 col-md-7 col-sm-7 secondSectionCarriers">
                         <div class=" part">
                             <h4>FREELANCE REPRESENTATIVE (WTRANSNET)</h4>
                             <p>Acesta reprezinta proiectul nostru dedicat Expeditorilor Caselor de Expeditii din

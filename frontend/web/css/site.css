@@ -403,6 +403,10 @@ a:hover, a:focus {
     color: white;
     font-size: 16px;
     top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 
 .customSectionPartners {
@@ -1291,13 +1295,15 @@ p {
 
     .firstCardPartners {
         max-height: 100%;
-        height: 757px;
+        /*height: 376px;*/
+        height: auto;
     }
 
-    /*.secondSectionPartners {*/
-        /*background: rgba(16, 16, 16, 0.8);*/
-        /*height: 100%;*/
-    /*}*/
+    .secondSectionPartners {
+        background: rgba(16, 16, 16, 0.8);
+        height: auto;
+        padding-bottom: 20px;
+    }
 
     .part {
         margin: 0;
@@ -1358,13 +1364,15 @@ p {
     }
 
     .secondSectionPartners {
-        height: -webkit-fill-available;
-        /*top: -564px;*/
+        /*height: -webkit-fill-available;*/
         background: rgba(16, 16, 16, 0.8);
-        /*margin: 0 15px 0 15px;*/
+        padding-bottom: 20px;
+        padding-top: 20px;
+        height: auto;
     }
 
     .secondSectionCarriers{
+        max-height: 100%;
         height: -webkit-fill-available;
         top: -564px;
         background: rgba(16, 16, 16, 0.8);
@@ -1380,6 +1388,13 @@ p {
 
     .col-xs-12 {
         padding: 0;
+    }
+
+    .uploadFile {
+        text-align: center;
+        max-width: 500px;
+        width: 100%s;
+        width: min-content;
     }
 
     .youtubeIframe {
@@ -1498,6 +1513,14 @@ p {
         padding-top: 16px;
     }
 
+    .verticalAllign {
+        line-height: 130px;
+    }
+
+    .mobileImageServicii{
+        width: 150px;
+    }
+
     .card-body-rgba {
         background: rgba(16, 16, 16, 0.8);
         text-align: center;
@@ -1519,5 +1542,14 @@ p {
         border-color: #101010;
         background-color: #080226;
     }
-
 }
+
+.field-uploadcvform-cvfile{
+    text-align: -webkit-center;
+}
+
+.uploadFile{
+    text-align: center;
+    max-width: 500px;
+    width: 100%s;
+ }

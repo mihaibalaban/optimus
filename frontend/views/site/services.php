@@ -14,17 +14,17 @@ $this->title = 'My Yii Application';
         </div>
         <div class="stuff" data-type="content">
             <div class="row verticalAllign">
-                <div class="col-lg-3 col-xs-12 rowOfImages">
-                    <img class="    img-fluid homeOtSol" src="images/logootsol.gif">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 rowOfImages">
+                    <img class="  mobileImageServicii  img-fluid homeOtSol" src="images/logootsol.gif">
                 </div>
-                <div class="col-lg-3 col-xs-12 rowOfImages">
-                    <img class="img-fluid" src="images/logo-wtransnet.gif" alt="Card image cap">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 rowOfImages">
+                    <img class="img-fluid mobileImageServicii" src="images/logo-wtransnet.gif" alt="Card image cap">
                 </div>
-                <div class="col-lg-3 col-xs-12 rowOfImages">
-                    <img class="img-fluid" src="images/logo_w_connecta.gif" alt="Card image cap">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 rowOfImages">
+                    <img class="mobileImageServicii img-fluid" src="images/logo_w_connecta.gif" alt="Card image cap">
                 </div>
-                <div class="col-lg-3 col-xs-12 rowOfImages">
-                    <img src="images/logo-wabi.gif">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 rowOfImages">
+                    <img class="mobileImageServicii img-fluid" src="images/logo-wabi.gif">
                 </div>
             </div>
         </div>
@@ -58,14 +58,15 @@ $this->title = 'My Yii Application';
                     <div class="card-body card-body-custom padding whiteCollor">
 
                         <div class="row">
+                            <?php
+                            foreach ($routes as $r) {
+                                ?>
+                            <div class="col-lg-2">
 
-                            <div class="col-lg-3">
-                                <?php
-                                foreach ($routes as $r) {
-                                    ?>
                                     <div class="author_bio_toggle_wrapper">
-                                        <a href="#0" id="<?= "author_bio_wrap_toggle" . $r['country']['id'] ?>"
-                                           class="btn  btn-sm btnExpand"><?= $r['country']['name'] ?></a>
+                                        <a href="#0"
+                                           id="<?= $r['country']['id'] ?>"
+                                           class="btn clickedElement btn-sm btnExpand"><?= $r['country']['name'] ?></a>
                                     </div>
 
 
@@ -79,10 +80,10 @@ $this->title = 'My Yii Application';
                                         } ?>
                                     </div>
 
-                                    <?php
-                                } ?>
 
                             </div>
+                            <?php
+                            } ?>
                         </div>
 
                     </div>
@@ -379,9 +380,13 @@ $this->title = 'My Yii Application';
 
     var expandID = [1, 2, 3, 4, 5, 6, 7];
 
-    $("#author_bio_wrap_toggle1").click(function () {
-        $("#author_bio_wrap1").slideToggle("fast");
+    var countryCount = "<?= count($routes) ?>";
+
+    $('.clickedElement').click(function () {
+        console.log(this.id)
+        $("#author_bio_wrap" + this.id).slideToggle("fast");
 
     });
+
 
 </script>
