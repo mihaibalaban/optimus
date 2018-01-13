@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 
 use frontend\models\Countryes;
+use frontend\models\FictiveEmails;
 use frontend\models\Routes;
 use frontend\models\UploadCvForm;
 use Yii;
@@ -155,6 +156,24 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+    public function actionFictiveEmail()
+    {
+        $model = new FictiveEmails();
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $model->save();
+            if ($model->save()) {
+                Yii::$app->session->setFlash('success', 'Felicitari, v-ati abonat cu succes la newsletter!');
+            } else {
+                Yii::$app->session->setFlash('error', 'Abonarea la newsletter nu a functionat, va rugam sa contactati administratorul!');
+            }
+            return $this->redirect(Yii::$app->request->referrer);
+        } else {
+            Yii::$app->session->setFlash('error', 'Abonarea la newsletter nu a functionat, va rugam sa contactati administratorul!');
+            return $this->redirect(Yii::$app->request->referrer);
+        }
+    }
+
     public function actionContact()
     {
         $model = new ContactForm();

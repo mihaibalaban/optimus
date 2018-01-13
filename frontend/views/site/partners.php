@@ -31,7 +31,7 @@ $this->title = 'Optimus Transport';
                         <div class="col-lg-7 col-md-7 no-padding secondSectionPartners">
                             <div class=" part">
 
-                                <p> Optimus Transport este partenerul ideal in promovarea serviciilor
+                                <p> <b>Optimus</b> Transport este partenerul ideal in promovarea serviciilor
                                     dumneavoastra
                                     pe teritoriul Romaniei, avand o baza de date de peste 10000 de companii din
                                     domeniul transporturilor.</p>
@@ -39,7 +39,7 @@ $this->title = 'Optimus Transport';
                                 <p>Experienta dobandita de-alungul anilor din interactiunea cu firme din acest
                                     domeniu ne-a facut sa identificam nevoile acestor companii si ne motiveaza
                                     constant sa gasim cele mai bune servicii pe care am putea sa le punem la
-                                    dispozitie. Companiile care recunosc numele si brand-ul Optimus Transport il
+                                    dispozitie. Companiile care recunosc numele si brand-ul <b>Optimus Transport</b> il
                                     asociaza cu calitate in detrimentul cantitatii.</p>
 
                                 <p> Atentia la detalii, orientarea catre client si flexibilitatea noastra sunt
@@ -55,7 +55,7 @@ $this->title = 'Optimus Transport';
                                     dumneavoastra. Pentru discutii detaliate referitoare la proiecte viitoare va
                                     rugam sa luati legatura cu administratorul companiei OPTIMUS TRANSPORT,
                                     Eduard
-                                    Ularu, la numarul de telefon +40-751.145.509.</p>
+                                    Ularu, la numarul de telefon <b>+40-751.145.509</b></p>
 
                             </div>
                         </div>

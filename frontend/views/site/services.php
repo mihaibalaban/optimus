@@ -61,7 +61,7 @@ $this->title = 'My Yii Application';
                             <?php
                             foreach ($routes as $r) {
                                 ?>
-                            <div class="col-lg-2">
+                                <div class="col-lg-2">
 
                                     <div class="author_bio_toggle_wrapper">
                                         <a href="#0"
@@ -81,8 +81,8 @@ $this->title = 'My Yii Application';
                                     </div>
 
 
-                            </div>
-                            <?php
+                                </div>
+                                <?php
                             } ?>
                         </div>
 
@@ -146,14 +146,11 @@ $this->title = 'My Yii Application';
                         <img class="img-fluid fitIn displayNone" style="height: 100%" src="images/poza-wtransnet.jpg">
                         <img id="image" class="img-fluid homeOtSol" src="images/logo-wtransnet.gif">
                         <p id="text" class="serviciiFirstText">
-                            Este o agentie de rezervari feribot pentru vehicule comerciale cu sediul in Ruse, Bulgaria.
-                            Va
-                            poate
-                            fi de foarte mare ajutor in a economisi bani la cursele dvs. in tari ce necesita o
-                            traversare cu
-                            feribotul, intrucat OT SOLUTIONS are parteneriate directe cu principalii operatori maritimi
-                            din
-                            partea Nordica a Europei.
+                            Fiind singura Bursa din Europa cu un sistem de Garantie a Platii, <b>Wtransnet pune la
+                            dispozitie un mediu sigur pentru desfasurarea activitatii membrilor sai. De mai bine de 20
+                            de ani punem accent pe securitatea dvs. ca membru, din acest motiv filtrele noastre de
+                            securitate si calitate asigura inregistrarea in bursa doar a Caselor de Expeditii solvabile
+                            si a Companiilor de Transport calificate.
                         </p>
 
                     </div>

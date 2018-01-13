@@ -15,7 +15,7 @@ class UploadCvForm extends Model
     public function rules()
     {
         return [
-            [['cvFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'pdf, doc'],
+            [['cvFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'pdf, doc, docx'],
         ];
     }
 

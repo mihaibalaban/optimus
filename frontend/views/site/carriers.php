@@ -25,13 +25,25 @@ $this->title = 'Optimus Transport';
             <h3>CARIERE</h3>
             <div class="row padding">
                 <div class="col-lg-4">
-                    <a href="#" class="btn btn-primary moreButton">Angajari</a>
+                    <div class="card-center">
+                        <div class="card-body-custom-carriers">
+                            Angajari
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-4">
-                    <a href="#" class="btn btn-primary moreButton">Intership</a>
+                    <div class="card-center">
+                        <div class="card-body-custom-carriers">
+                            Intership
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-4">
-                    <a href="#" class="btn btn-primary moreButton">Freight Operator</a>
+                    <div class="card-center">
+                        <div class="card-body-custom-carriers">
+                            Freight Operator
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
