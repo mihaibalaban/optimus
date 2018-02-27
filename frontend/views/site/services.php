@@ -18,13 +18,13 @@ $this->title = 'My Yii Application';
                     <img class="  mobileImageServicii  img-fluid homeOtSol" src="images/logootsol.gif">
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 rowOfImages">
-                    <img class="img-fluid mobileImageServicii" src="images/logo-wtransnet.gif" alt="Card image cap">
+                    <img class="img-fluid mobileImageServicii" style="max-width: 213px;" src="images/logo-wtransnet.gif" alt="Card image cap">
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 rowOfImages">
-                    <img class="mobileImageServicii img-fluid" src="images/logo_w_connecta.gif" alt="Card image cap">
+                    <img class="mobileImageServicii img-fluid"  style="max-width: 213px;" src="images/logo_w_connecta.gif" alt="Card image cap">
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 rowOfImages">
-                    <img class="mobileImageServicii img-fluid" src="images/logo-wabi.gif">
+                    <img class="mobileImageServicii img-fluid" style="max-width: 213px;" src="images/logo-wabi.gif">
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@ $this->title = 'My Yii Application';
                     <div class="secondTab secondTabb1 ">
                         <div class="greyScaleBackground">
                             <img class="img-fluid fitIn displayNone" style="height: 100%" src="images/ship_left.jpg">
-                            <img id="image" class="img-fluid homeOtSol" src="images/logootsol.gif">
+                            <img id="image"  class="img-fluid homeOtSol" src="images/logootsol.gif">
                             <p id="text" class="serviciiFirstText">
                                 Este o agentie de rezervari feribot pentru vehicule comerciale cu sediul in Ruse,
                                 Bulgaria.
@@ -144,8 +144,8 @@ $this->title = 'My Yii Application';
                 <div class="secondTab secondTabb2">
                     <div class="greyScaleBackground">
                         <img class="img-fluid fitIn displayNone" style="height: 100%" src="images/poza-wtransnet.jpg">
-                        <img id="image" class="img-fluid homeOtSol" src="images/logo-wtransnet.gif">
-                        <p id="text" class="serviciiFirstText">
+                        <img  style="max-width: 213px;"id="image" class="img-fluid homeOtSol" src="images/logo-wtransnet.gif">
+                        <p id="text" style="    margin-top: 10px;" class="serviciiFirstText">
                             Fiind singura Bursa din Europa cu un sistem de Garantie a Platii, <b>Wtransnet pune la
                             dispozitie un mediu sigur pentru desfasurarea activitatii membrilor sai. De mai bine de 20
                             de ani punem accent pe securitatea dvs. ca membru, din acest motiv filtrele noastre de
@@ -266,7 +266,7 @@ $this->title = 'My Yii Application';
                     <div class="greyScaleBackground">
                         <img class="img-fluid fitIn smallWidth" style="height: 100%" src="images/wconnecta-banner.jpg">
                     </div>
-                    <img id="image" class="img-fluid homeOtSol" src="images/wconecta-logo.gif">
+                    <img id="image" style="max-width: 213px;" class="img-fluid homeOtSol" src="images/wconecta-logo.gif">
                     <p id="text" class="oneThousandWidth">
                         Ce este Wconnecta?
                         Wconnecta este un proiect proeminent, care dupa 7 editii, a devenit un eveniment cu un

@@ -20,12 +20,14 @@ $this->title = 'Optimus Transport';
         <div class="image aboutUs">
         </div>
         <div class="stuff" style="    max-width: 780px;" data-type="content">
-            <h3 class="aboutUsTextHeader">
+            <i><h3 class="aboutUsTextHeader">
                 "Am infiintat aceasta companie cu scopul de a aduce un plus de valoare pietei transportatorulor din Romania.
                 </h3>
             <h3>De mai bine de 10 ani lucrez strans cu oameni din acest domeniu si vad constant problemele de care se lovesc, iar acest
                 lucru ma inspira sa dezvolt servicii care sa le faca munca mai usoara si sa le asigure prosperitatea afacerii"
             </h3>
+            <h4 style="text-align: right">Eduard Ularu, manager</h4>
+            </i>
         </div>
     </section>
     <div class="container">

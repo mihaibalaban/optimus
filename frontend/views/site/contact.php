@@ -68,12 +68,12 @@ $this->title = 'Optimus Transport';
                                 <p>office@optimus-transport.ro</p>
                             </div>
 
-                            <div class="contact-elements">
-                                <p>Wtransnet & Wconnecta:</p>
-                                <p>Lucian Coman</p>
-                                <p>+40-755.017.888</p>
-                                <p>lcoman@wtransnet.com</p>
-                            </div>
+<!--                            <div class="contact-elements">-->
+<!--                                <p>Wtransnet & Wconnecta:</p>-->
+<!--                                <p>Lucian Coman</p>-->
+<!--                                <p>+40-755.017.888</p>-->
+<!--                                <p>lcoman@wtransnet.com</p>-->
+<!--                            </div>-->
 
                             <div class="contact-elements">
                                 <p>Alexandra Offenberg</p>

@@ -75,11 +75,11 @@ $this->title = 'Optimus Transport';
                                 <div class="card bottomPartPartners">
 
                                     <!--Card image-->
-                                    <img class="img-fluid fitIn" style="height: 100%" src="images/wtransnet-partners.jpg">
+                                    <img class="img-fluid fitIn"  style="height: 100%" src="images/wtransnet-partners.jpg">
                                     <!--Card content-->
                                     <div class="card-body cardPartners paddingLeft">
                                         <!--Title-->
-                                        <img class="img-fluid homeOtSol" src="images/logo-wtransnet.gif">
+                                        <img class="img-fluid homeOtSol" style=" max-width: 213px;" src="images/logo-wtransnet.gif">
                                         <!--Text-->
                                     </div>
 
@@ -107,7 +107,7 @@ $this->title = 'Optimus Transport';
                                     <!--Card content-->
                                     <div class="card-body cardPartners paddingLeft">
                                         <!--Title-->
-                                        <img class="img-fluid homeOtSol" src="images/logo_w_connecta.gif">
+                                        <img style="max-width: 213px;" class="img-fluid homeOtSol" src="images/logo_w_connecta.gif">
                                         <!--Text-->
                                     </div>
 

@@ -38,7 +38,9 @@ body {
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
+.img-fluid{
 
+}
 .row {
     margin-right: 0;
     margin-left: 0;
@@ -1709,5 +1711,6 @@ p {
 .card-center{
     text-align: -webkit-center;
 }
-
-/*shit*/
+.btnExpand:hover{
+    color:#080225!important;
+}

@@ -17,7 +17,7 @@ AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<link rel="shortcut icon" href="<?php echo Yii::$app->getHomeUrl(); ?>/otFavicon.gif" type="image/x-icon"/>
+<link rel="shortcut icon" href="<?php echo Yii::$app->getHomeUrl(); ?>/otFavicon.png" type="image/x-icon"/>
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
@@ -131,7 +131,7 @@ $model = new \frontend\models\FictiveEmails() ?>
                     <h4 class="paddingFooterElements">Primeste informatii cu privire la situatia din porturi</h4>
                     <?php $form = ActiveForm::begin(['action' => 'fictive-email']); ?>
 
-                    <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
+                    <?= $form->field($model, 'name')->textInput() ?>
 
                     <?= $form->field($model, 'email') ?>
 

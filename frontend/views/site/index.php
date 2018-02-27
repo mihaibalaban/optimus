@@ -34,7 +34,7 @@ $this->title = 'My Yii Application';
                                     <div class="card-body card-body-custom paddingLeft">
                                         <!--Title-->
                                         <h3 class="card-title">REZERVARI FERRY VIA</h3>
-                                        <img class="img-fluid homeOtSol" src="images/logootsol.gif">
+                                        <img style="max-width: 213px;" class="img-fluid homeOtSol" src="images/logootsol.gif">
                                         <!--Text-->
                                         <p class="card-text">Acoperind toata partea de Nord a
                                             Europei,
@@ -43,7 +43,7 @@ $this->title = 'My Yii Application';
                                             fac legatura intre Europa continentala si Anglia, Irlanda, Danemarca,
                                             Suedia,
                                             Norvegia, Finlanda, Sicilia.</p>
-                                        <a href="#" class="btn btn-primary moreButton">Afla mai multe</a>
+                                        <a href="https://www.otsolutions.bg" class="btn btn-primary moreButton">Afla mai multe</a>
                                     </div>
                                 </div>
 
@@ -60,7 +60,7 @@ $this->title = 'My Yii Application';
                                                     <h3> SERVICII DE BURSA TRANSPORT VIA</h3>
                                                 </div>
                                                 <div class="row">
-                                                    <img class="img-fluid" src="images/logo-wtransnet.gif"
+                                                    <img style="max-width: 213px;" class="img-fluid" src="images/logo-wtransnet.gif"
                                                          alt="Card image cap">
                                                 </div>
                                             </div>
@@ -85,7 +85,7 @@ $this->title = 'My Yii Application';
                                             bursa careia ii pasa de tine? Daca raspunsurile au fost DA, Wtransnet poate
                                             fi
                                             solutia.</p>
-                                        <a href="#" class="btn btn-primary moreButton">Afla mai multe</a>
+                                        <a href="https://www.wtransnet.com" class="btn btn-primary moreButton">Afla mai multe</a>
                                     </div>
 
                                 </div>
@@ -104,7 +104,7 @@ $this->title = 'My Yii Application';
                             <div class="col-lg-8 col-md-8 col-sm-8 third-content-a">
                                 <div class="row wc">
                                     <div class="col-lg-12">
-                                        <img class="img-fluid" src="images/logo_w_connecta.gif" alt="Card image cap">
+                                        <img style="max-width: 213px;"   class="img-fluid" src="images/logo_w_connecta.gif" alt="Card image cap">
                                     </div>
                                     <div class="col-lg-8" style="    margin-top: 18px;">
                                         <p>
@@ -120,7 +120,7 @@ $this->title = 'My Yii Application';
                                             de
                                             catre
                                             Bursa Wtransnet.</p>
-                                        <a href="#" class="btn btn-primary moreButton">Afla mai
+                                        <a href="http://www.wconnecta.com/en/" class="btn btn-primary moreButton">Afla mai
                                             multe</a>
                                     </div>
 
@@ -149,7 +149,7 @@ $this->title = 'My Yii Application';
                                 <div class="card-body-rgba">
 
                                     <!--Card image-->
-                                    <img src="images/logo-wabi.gif">
+                                    <img style="max-width: 213px;" src="images/logo-wabi.gif">
                                     <!--Card content-->
                                     <div class="card-body card-body-custom-1">
                                         <p class="card-text" style="font-size: 15px">Un website este ca o carte de
