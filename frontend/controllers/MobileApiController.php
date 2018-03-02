@@ -31,38 +31,69 @@ class MobileApiController extends Controller
     /**
      * @inheritdoc
      */
-    public function behaviors()
+//    public function behaviors()
+//    {
+//        return [
+//            'access' => [
+//                'class' => AccessControl::className(),
+//                'only' => ['logout', 'signup', 'update-voucher'],
+//                'rules' => [
+//                    [
+//                        'actions' => ['signup'],
+//                        'allow' => true,
+//                        'roles' => ['@'],
+//                    ],
+//                    [
+//                        'actions' => ['update-voucher'],
+//                        'allow' => true,
+//                        'roles' => ['?'],
+//                    ],
+//                    [
+//                        'actions' => ['logout'],
+//                        'allow' => true,
+//                        'roles' => ['@'],
+//                    ],
+//                ],
+//            ],
+//
+//            'verbs' => [
+//                'class' => VerbFilter::className(),
+//                'actions' => [
+//                    'logout' => ['post'],
+//                    'update-voucher' => ['post'],
+//                ],
+//            ],
+//        ];
+//    }
+
+    public static function allowedDomains()
     {
         return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['logout', 'signup', 'update-voucher'],
-                'rules' => [
-                    [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                    [
-                        'actions' => ['update-voucher'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                    'update-voucher' => ['post'],
-                ],
-            ],
+             '*',                        // star allows all domains
         ];
+    }
+
+
+
+    public function behaviors()
+    {
+        return array_merge(parent::behaviors(), [
+
+            // For cross-domain AJAX request
+            'corsFilter'  => [
+                'class' => \yii\filters\Cors::className(),
+                'cors'  => [
+                    // restrict access to domains:
+                    'Origin'                           => static::allowedDomains(),
+                    'Access-Control-Allow-Credentials' => true,
+                    'Access-Control-Max-Age'           => 3600,                 // Cache (seconds)
+                    'Access-Control-Request-Methods' => ['GET', 'POST', 'OPTIONS', 'DELETE', 'PUT'],
+                    'Access-Control-Request-Headers' => ['Expiry','Content-Type'],
+
+                ],
+            ],
+
+        ]);
     }
 
     /**
@@ -86,11 +117,12 @@ class MobileApiController extends Controller
         $voucher = Vouchers::find()
             ->select("*")
             ->where(["or", ["temporization" => NULL], ['<=', "temporization", time()]])
+            ->andWhere(["date"=>null])
             ->asArray()
             ->one();
         if ($voucher) {
             $voucher = Vouchers::findOne($voucher['id']);
-            $voucher->temporization = strtotime("+10 minutes");
+            $voucher->temporization = strtotime("+4 seconds");
             if ($voucher->save()) {
 
                 return Json::encode($voucher);
@@ -108,14 +140,15 @@ class MobileApiController extends Controller
     public function actionUpdateVoucher()
     {
         if (Yii::$app->request->isPost) {
-            $voucher_id = Yii::$app->request->post()['voucher_id'];
-            $voucherUpdated = Yii::$app->request->post();
+            $response = Json::decode(Yii::$app->request->getRawBody());
+            Yii::trace($response);
+            $voucher_id = $response['voucher_id'];
             $voucher = Vouchers::findOne($voucher_id);
-            unset($voucherUpdated['voucher_id']);
-            $voucherUpdated['temporization'] = strtotime("+10 minutes");
-            Yii::warning($voucherUpdated);
+            unset($response['voucher_id']);
+            $response['temporization'] = strtotime("+10 minutes");
+            Yii::warning($response);
 
-            if ($voucher->load($voucherUpdated, "")) {
+            if ($voucher->load($response, "")) {
                 if ($voucher->save()) {
                     return Json::encode($voucher);
                 }
@@ -134,7 +167,8 @@ class MobileApiController extends Controller
     public function actionGetSpecificVouchers(){
 
         if (Yii::$app->request->isPost) {
-            $voucher = Vouchers::findOne(['id'=>Yii::$app->request->post()['voucher_id']]);
+            $response = Json::decode(Yii::$app->request->getRawBody());
+            $voucher = Vouchers::findOne([$response['voucher_id']]);
             if($voucher){
 
                 return Json::encode($voucher);
