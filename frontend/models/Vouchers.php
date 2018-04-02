@@ -38,7 +38,7 @@ class Vouchers extends \yii\db\ActiveRecord
         return [
             [['date', 'temporization','completed_voucher'], 'safe'],
             [['voucher'], 'required'],
-            [['truck', 'truck_length', 'route', 'reference', 'price', 'baf', 'voucher', 'invoice'], 'string', 'max' => 123],
+            [['truck', 'truck_length', 'route', 'reference', 'price', 'baf', 'voucher', 'invoice'], 'safe'],
         ];
     }
 

@@ -12,7 +12,7 @@ use Yii;
  * @property string $uuid
  * @property integer $status
  */
-class Users extends \yii\db\ActiveRecord
+class User extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

@@ -60,7 +60,7 @@ $this->title = 'My Yii Application';
                                                     <h3> SERVICII DE BURSA TRANSPORT VIA</h3>
                                                 </div>
                                                 <div class="row">
-                                                    <img style="max-width: 213px;" class="img-fluid" src="images/logo-wtransnet.gif"
+                                                    <img style="max-width: 213px;" class="img-fluid" src="images/alogo-wtransnet.gif"
                                                          alt="Card image cap">
                                                 </div>
                                             </div>

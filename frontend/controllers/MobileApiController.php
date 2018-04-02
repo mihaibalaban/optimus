@@ -6,7 +6,7 @@ use frontend\models\Countryes;
 use frontend\models\FictiveEmails;
 use frontend\models\Routes;
 use frontend\models\UploadCvForm;
-use frontend\models\Users;
+use frontend\models\User;
 use frontend\models\Vouchers;
 use Yii;
 use yii\base\InvalidParamException;
@@ -21,7 +21,8 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use yii\web\UploadedFile;
-use yii\web\User;
+
+//use yii\web\User;
 
 /**
  * Site controller
@@ -69,10 +70,9 @@ class MobileApiController extends Controller
     public static function allowedDomains()
     {
         return [
-             '*',                        // star allows all domains
+            '*',                        // star allows all domains
         ];
     }
-
 
 
     public function behaviors()
@@ -80,15 +80,15 @@ class MobileApiController extends Controller
         return array_merge(parent::behaviors(), [
 
             // For cross-domain AJAX request
-            'corsFilter'  => [
+            'corsFilter' => [
                 'class' => \yii\filters\Cors::className(),
-                'cors'  => [
+                'cors' => [
                     // restrict access to domains:
-                    'Origin'                           => static::allowedDomains(),
+                    'Origin' => static::allowedDomains(),
                     'Access-Control-Allow-Credentials' => true,
-                    'Access-Control-Max-Age'           => 3600,                 // Cache (seconds)
+                    'Access-Control-Max-Age' => 3600,                 // Cache (seconds)
                     'Access-Control-Request-Methods' => ['GET', 'POST', 'OPTIONS', 'DELETE', 'PUT'],
-                    'Access-Control-Request-Headers' => ['Expiry','Content-Type'],
+                    'Access-Control-Request-Headers' => ['Expiry', 'Content-Type'],
 
                 ],
             ],
@@ -117,7 +117,7 @@ class MobileApiController extends Controller
         $voucher = Vouchers::find()
             ->select("*")
             ->where(["or", ["temporization" => NULL], ['<=', "temporization", time()]])
-            ->andWhere(["date"=>null])
+            ->andWhere(['date' => null, 'reference' => null, 'truck' => null])
             ->asArray()
             ->one();
         if ($voucher) {
@@ -141,14 +141,14 @@ class MobileApiController extends Controller
     {
         if (Yii::$app->request->isPost) {
             $response = Json::decode(Yii::$app->request->getRawBody());
-            Yii::trace($response);
             $voucher_id = $response['voucher_id'];
+            $voucherUpdated = $response;
             $voucher = Vouchers::findOne($voucher_id);
-            unset($response['voucher_id']);
-            $response['temporization'] = strtotime("+10 minutes");
-            Yii::warning($response);
+            unset($voucherUpdated['voucher_id']);
+            $voucherUpdated['temporization'] = strtotime("+10 minutes");
+            Yii::warning($voucherUpdated);
 
-            if ($voucher->load($response, "")) {
+            if ($voucher->load($voucherUpdated, "")) {
                 if ($voucher->save()) {
                     return Json::encode($voucher);
                 }
@@ -158,21 +158,31 @@ class MobileApiController extends Controller
         }
     }
 
-    public function actionGetAllVouchers(){
+    // not used
+    public function actionGetAllVouchers()
+    {
         $vouchers = Vouchers::find()->all();
 
         return Json::encode($vouchers);
     }
 
-    public function actionGetSpecificVouchers(){
+    public function actionGetLastVouchers()
+    {
+        $vouchers = Vouchers::find()->orderBy(['temporization' => SORT_DESC])->andWhere(['not', ['date' => null]])->limit(20)->all();
 
+        return Json::encode($vouchers);
+    }
+
+    public function actionGetSpecificVouchers()
+    {
         if (Yii::$app->request->isPost) {
             $response = Json::decode(Yii::$app->request->getRawBody());
-            $voucher = Vouchers::findOne([$response['voucher_id']]);
-            if($voucher){
+            $response['by'];
+            $voucher = Vouchers::find()->select('*')->where([$response['by'] => $response['value']])->one();
+            if ($voucher) {
 
                 return Json::encode($voucher);
-            }else{
+            } else {
 
                 return Json::encode(['error' => 'voucher not found']);
             }
@@ -182,7 +192,7 @@ class MobileApiController extends Controller
     public function actionAssignNewUser()
     {
         if (Yii::$app->request->isPost) {
-            $newUser = new Users();
+            $newUser = new User();
             if ($newUser->load(Yii::$app->request->post(), "")) {
                 $newUser->status = 0; // request sent by user
 
@@ -197,22 +207,26 @@ class MobileApiController extends Controller
     {
         if (Yii::$app->request->isPost) {
             $user_uuid = Yii::$app->request->post()['uuid'];
-            $user = Users::findOne(['uuid' => $user_uuid]);
+            $user = User::findOne(['uuid' => $user_uuid]);
             Yii::warning($user['status']);
 
             if ($user) {
                 if ($user['status'] == 1) {
 
                     return Json::encode(['eligible' => true]);
-                }else if ($user['status'] == 0){
+                } else if ($user['status'] == 0) {
 
                     return Json::encode(['message' => 'Need to wait to be accepted by provider']);
                 }
             } else {
 
-                return Json::encode(['eligible' => false,'message' => 'You are not eligible']);
+                return Json::encode(['eligible' => false, 'message' => 'You are not eligible']);
             }
         }
     }
 
 }
+
+
+
+////referinta, nr inmatriculare, voucher, invoice
