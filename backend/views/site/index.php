@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 use kartik\file\FileInput;
+use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -13,6 +14,7 @@ $this->title = 'My Yii Application';
     <div class="jumbotron">
         <h1>Salut, <?= Yii::$app->user->identity->username ?> !</h1>
     </div>
+    
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
 
     <?= $form->field($model, 'cvFile')->label(false)->widget(FileInput::classname(), [

@@ -10,11 +10,15 @@ use yii\web\AssetBundle;
 class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
+    public $jsOptions = array(
+        'position' => \yii\web\View::POS_HEAD
+    );
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
     ];
     public $js = [
+        'globalJs'
     ];
     public $depends = [
         'yii\web\YiiAsset',

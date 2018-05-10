@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Vouchers */
 
-$this->title = $model->id;
+$this->title = $model->voucher;
 $this->params['breadcrumbs'][] = ['label' => 'Vouchers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

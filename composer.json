@@ -15,12 +15,15 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": "^2.0",
+        "yiisoft/yii2": "~2.0.13",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "kartik-v/yii2-tabs-x": "*",
         "kartik-v/yii2-widget-fileinput": "@dev",
-        "moonlandsoft/yii2-phpexcel": "*"
+        "moonlandsoft/yii2-phpexcel": "*",
+        "yiisoft/yii2-jui": "^2.0",
+        "kartik-v/yii2-export": "@dev",
+        "codemix/yii2-excelexport": "^2.7"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

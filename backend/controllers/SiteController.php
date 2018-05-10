@@ -4,8 +4,14 @@ namespace backend\controllers;
 
 use backend\models\UploadVoucherForm;
 use Faker\Provider\DateTime;
+use frontend\models\PasswordResetRequestForm;
+use frontend\models\ResetPasswordForm;
+use frontend\models\SignupForm;
 use frontend\models\Vouchers;
 use Yii;
+use yii\base\InvalidParamException;
+use yii\data\ActiveDataProvider;
+use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -27,7 +33,7 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'signup', 'request-password-reset', 'reset-password', 'error'],
                         'allow' => true,
                     ],
                     [
@@ -68,11 +74,25 @@ class SiteController extends Controller
 
         $model = new UploadVoucherForm();
 
+        $query = Vouchers::find();
+
+        $provider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 50,
+            ],
+            'sort' => [
+                'defaultOrder' => [
+
+                ]
+            ],
+        ]);
+
         if (Yii::$app->request->isPost) {
 
             $model->cvFile = UploadedFile::getInstance($model, 'cvFile');
             $model->upload();
-            $filename = 'uploads/vouchere.csv';
+            $filename = 'uploads/vouchere.xls';
             ini_set('memory_limit', '-1');
             set_time_limit(1500);
             $data = \moonland\phpexcel\Excel::import($filename, []); // $config is an optional
@@ -82,7 +102,7 @@ class SiteController extends Controller
                 $voucher = new Vouchers();
 
                 if (strlen($v['Date']) > 1) {
-                    if(self::validateDate($v['Date'])) {
+                    if (self::validateDate($v['Date'])) {
                         $date = new \DateTime();
                         $date->format('Y-m-d');
 
@@ -97,6 +117,9 @@ class SiteController extends Controller
                 $voucher->truck_length = $v['Length'];
                 $voucher->route = $v['Route'];
                 $voucher->reference = $v['Ref'];
+//                if($v['owner']) {
+//                    $voucher->owner = $v['owner'];
+//                }
                 $voucher->price = $v['Price'];
                 $voucher->baf = $v['BAF'];
                 $voucher->voucher = $v['Voucher'];
@@ -110,7 +133,8 @@ class SiteController extends Controller
             }
         } else {
             return $this->render('index', [
-                'model' => $model
+                'model' => $model,
+                'dataProvider' => $provider
             ]);
 
         }
@@ -143,7 +167,6 @@ class SiteController extends Controller
         }
     }
 
-
     public function actionAddVouchers()
     {
 
@@ -160,5 +183,74 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function actionSignup()
+    {
+        $model = new SignupForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->signup()) {
+//                if (Yii::$app->getUser()->login($user)) {
+                $model = new LoginForm();
+
+                return $this->render('login', [
+                    'model' => $model,
+                ]);
+//                }
+            }
+        }
+
+        return $this->render('signup', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Requests password reset.
+     *
+     * @return mixed
+     */
+    public function actionRequestPasswordReset()
+    {
+        $model = new PasswordResetRequestForm();
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->sendEmail()) {
+                Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+
+                return $this->goHome();
+            } else {
+                Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for the provided email address.');
+            }
+        }
+
+        return $this->render('requestPasswordResetToken', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Resets password.
+     *
+     * @param string $token
+     * @return mixed
+     * @throws BadRequestHttpException
+     */
+    public function actionResetPassword($token)
+    {
+        try {
+            $model = new ResetPasswordForm($token);
+        } catch (InvalidParamException $e) {
+            throw new BadRequestHttpException($e->getMessage());
+        }
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword()) {
+            Yii::$app->session->setFlash('success', 'New password saved.');
+
+            return $this->goHome();
+        }
+
+        return $this->render('resetPassword', [
+            'model' => $model,
+        ]);
     }
 }

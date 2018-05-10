@@ -19,7 +19,7 @@ class VouchersSearch extends Vouchers
     {
         return [
             [['id'], 'integer'],
-            [['date', 'truck', 'truck_length', 'route', 'reference', 'price', 'baf', 'voucher', 'invoice', 'temporization'], 'safe'],
+            [['date', 'truck', 'truck_length', 'route', 'reference', 'price', 'baf', 'voucher', 'invoice', 'temporization', 'total'], 'safe'],
         ];
     }
 
@@ -66,6 +66,7 @@ class VouchersSearch extends Vouchers
         $query->andFilterWhere(['like', 'truck', $this->truck])
             ->andFilterWhere(['=', 'truck_length', $this->truck_length])
             ->andFilterWhere(['like', 'route', $this->route])
+            ->andFilterWhere(['like', 'total', $this->total])
             ->andFilterWhere(['like', 'reference', $this->reference])
             ->andFilterWhere(['like', 'price', $this->price])
             ->andFilterWhere(['like', 'baf', $this->baf])

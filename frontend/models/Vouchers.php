@@ -14,6 +14,8 @@ use Yii;
  * @property string $route
  * @property string $reference
  * @property string $price
+ * @property string $owner
+ * @property string $total
  * @property string $baf
  * @property string $voucher
  * @property string $invoice
@@ -36,7 +38,7 @@ class Vouchers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['date', 'temporization','completed_voucher'], 'safe'],
+            [['date', 'temporization','completed_voucher', 'owner', 'total'], 'safe'],
             [['voucher'], 'required'],
             [['truck', 'truck_length', 'route', 'reference', 'price', 'baf', 'voucher', 'invoice'], 'safe'],
         ];
@@ -49,6 +51,8 @@ class Vouchers extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'owner' => 'Owner',
+            'total' => 'Total',
             'date' => 'Date',
             'truck' => 'Truck',
             'truck_length' => 'Truck Length',

@@ -7,7 +7,7 @@ return [
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
-            'name'=>'Optimus Transport!'
+//            'name'=>'Optimus Transport!'
         ],
     ],
 ];
