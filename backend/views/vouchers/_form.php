@@ -42,11 +42,15 @@ foreach ([7, 9, 10, 12, 17, 19] as $number) {
             <?= $form->field($model, 'route')->dropDownList(
                 ['CA-DO' => 'CA-DO', 'DO-CA' => 'DO-CA'], ['id' => 'route', 'onchange' => 'changeBaff(value)']
             ) ?>
+
+            <?= $form->field($model, 'reference')->textInput(['maxlength' => true]) ?>
+
         </div>
         <div class="col-lg-6">
 
+            <?= $form->field($model, 'goods')->textInput() ?>
 
-            <?= $form->field($model, 'reference')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'drivers')->textInput() ?>
 
             <?= $form->field($model, 'price')->textInput(['maxlength' => true, 'id' => 'price', 'onchange' => 'changePrice(value)', 'readOnly' => true]) ?>
 
@@ -54,7 +58,7 @@ foreach ([7, 9, 10, 12, 17, 19] as $number) {
 
             <?= $form->field($model, 'total')->textInput(['id' => 'total', 'readOnly' => true]) ?>
 
-            <?= $form->field($model, 'invoice')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'invoice')->textInput(['maxlength' => true, 'readOnly' => true]) ?>
 
             <div class="form-group">
                 <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
@@ -66,44 +70,44 @@ foreach ([7, 9, 10, 12, 17, 19] as $number) {
 </div>
 
 <script>
+    //
+    //    var baf, price;
+    //    changeBaff(document.getElementById('route').value);
+    //
+    //    function changeBaff(value) {
+    //        var route = value;
+    //        if (route == 'CA-DO') {
+    //            baf = document.getElementById("baf").value = 3.09;
+    //        } else if (route == 'DO-CA') {
+    //            baf = document.getElementById("baf").value = 3.11;
+    //        }
+    //
+    //        document.getElementById("total").value = baf + price;
+    //    }
+    //
+    //    changePrice(document.getElementById('length').value);
+    //
+    //    function changePrice(value) {
+    //        var length = value;
+    //        if (length == 7) {
+    //            price = document.getElementById("price").value = 91.7;
+    //        } else if (length == 9) {
+    //            price = document.getElementById("price").value = 145.4;
+    //        } else if (length == 10) {
+    //            price = document.getElementById("price").value = 145.4;
+    //        } else if (length == 12) {
+    //            price = document.getElementById("price").value = 168.4;
+    //        } else if (length == 17) {
+    //            price = document.getElementById("price").value = 168.4;
+    //        } else if (length == 19) {
+    //            price = document.getElementById("price").value = 320;
+    //        } else {
+    //            price = document.getElementById("price").value = value;
+    //        }
+    //        console.log(+baf + +price);
+    //        document.getElementById("total").value = +baf + +price;
+    //
+    //    }
 
-    var baf, price;
-    changeBaff(document.getElementById('route').value);
 
-    function changeBaff(value) {
-        var route = value;
-        if (route == 'CA-DO') {
-            baf = document.getElementById("baf").value = 3.09;
-        } else if (route == 'DO-CA') {
-            baf = document.getElementById("baf").value = 3.11;
-        }
-
-        document.getElementById("total").value = baf + price;
-    }
-
-    changePrice(document.getElementById('length').value);
-
-    function changePrice(value) {
-        var length = value;
-        if (length == 7) {
-            price = document.getElementById("price").value = 91.7;
-        } else if (length == 9) {
-            price = document.getElementById("price").value = 145.4;
-        } else if (length == 10) {
-            price = document.getElementById("price").value = 145.4;
-        } else if (length == 12) {
-            price = document.getElementById("price").value = 168.4;
-        } else if (length == 17) {
-            price = document.getElementById("price").value = 168.4;
-        } else if (length == 19) {
-            price = document.getElementById("price").value = 320;
-        } else {
-            price = document.getElementById("price").value = value;
-        }
-        console.log(+baf + +price);
-        document.getElementById("total").value = +baf + +price;
-
-    }
-
-   
 </script>

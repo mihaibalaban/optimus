@@ -114,22 +114,24 @@ class MobileApiController extends Controller
 
     public function actionGenerateVoucher()
     {
+        $limit = Json::decode(Yii::$app->request->getRawBody());
+        Yii::warning($limit['limit']);
         $voucher = Vouchers::find()
             ->select("*")
             ->where(["or", ["temporization" => NULL], ['<=', "temporization", time()]])
             ->andWhere(['date' => null, 'reference' => null, 'truck' => null])
             ->asArray()
-            ->one();
+            ->limit($limit['limit'])
+            ->all();
+
         if ($voucher) {
-            $voucher = Vouchers::findOne($voucher['id']);
-            $voucher->temporization = strtotime("+4 seconds");
-            if ($voucher->save()) {
+            foreach ($voucher as $v) {
 
-                return Json::encode($voucher);
-            } else {
-
-                return Json::encode(['error' => "voucher can't be generated"]);
+                $v = Vouchers::findOne($v['id']);
+                $v->temporization = strtotime("+4 seconds");
+                $v->save();
             }
+            return Json::encode($voucher);
         } else {
 
             return Json::encode(['error' => "there are not eligible vouchers"]);

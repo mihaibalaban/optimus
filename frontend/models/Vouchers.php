@@ -38,7 +38,7 @@ class Vouchers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['date', 'temporization','completed_voucher', 'owner', 'total'], 'safe'],
+            [['date', 'temporization','completed_voucher', 'owner', 'total','goods','drivers'], 'safe'],
             [['voucher'], 'required'],
             [['truck', 'truck_length', 'route', 'reference', 'price', 'baf', 'voucher', 'invoice'], 'safe'],
         ];
@@ -63,7 +63,9 @@ class Vouchers extends \yii\db\ActiveRecord
             'voucher' => 'Voucher',
             'invoice' => 'Invoice',
             'temporization' => 'Temporization',
-            'completed_voucher' => 'completed_voucher'
+            'completed_voucher' => 'completed_voucher',
+            'goods' => 'Goods',
+            'drivers' => 'Drivers',
         ];
     }
 }

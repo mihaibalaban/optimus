@@ -1,5 +1,7 @@
 <?php
 
+use kartik\file\FileInput;
+use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\bootstrap\Modal;
@@ -12,9 +14,49 @@ $this->title = 'Vouchers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="vouchers-index">
+    <div style="margin-bottom: 20px">
+        <?= Html::button('Multiple generator', ['id' => 'modelButton', 'value' => \yii\helpers\Url::to(['list/create']), 'class' => 'btn btn-lg btn-primary']) ?>
+    </div>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
 
-    <?= Html::a("Generate voucher", ['vouchers/generate-voucher'], ['class' => 'btn btn-lg btn-primary']) ?>
-    <?= Html::button('Multiple generator - beta version', ['id' => 'modelButton', 'value' => \yii\helpers\Url::to(['list/create']), 'class' => 'btn btn-lg btn-danger']) ?>
+    <?= $form->field($model, 'cvFile')->label(false)->widget(FileInput::classname(), [
+        'options' => ['multiple' => false],
+        'language' => 'en',
+        'pluginOptions' => [
+            'initialCaption' => "Select invoices file",
+            'showUpload' => false,
+            'showCancel' => false,
+            'showPreview' => false,
+            'showRemove' => false,
+            'browseLabel' => 'adauga',
+            'mainClass' => 'input-group-lg',
+            'fileActionSettings' => [
+                'showZoom' => false,
+            ],
+        ]
+    ]); ?>
+
+    <button class="btn btn-primary moreButton">Uploadeaza Vouchere</button>
+
+    <?php ActiveForm::end() ?>
+    <?php
+    if (sizeof($vouchersWithProblems) > 0) {
+        ?>
+        <h3>Save this vouchers values and verify them manually: </h3>
+
+        <?php
+    }
+    ?>
+    <?php
+    foreach ($vouchersWithProblems as $vp) {
+        ?>
+        <p>
+            <?= $vp['voucher']; ?>
+        </p>
+
+    <?php }
+    ?>
+
     <h1><?= Html::encode($this->title) ?></h1>
 
 
@@ -34,14 +76,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'truck_length',
             'route',
             'reference',
+            'drivers',
+            'goods',
             'price',
             'baf',
+            'total',
             'invoice',
-            ['attribute' => 'total',
-                'value' => function ($model) {
-                    return $model->price + $model->baf;
-                }
-            ],
+
 //             'temporization',
 
             ['class' => 'yii\grid\ActionColumn'],

@@ -2,6 +2,8 @@
 
 namespace backend\controllers;
 
+use backend\models\AttributeValue;
+use backend\models\UploadVoucherForm;
 use Yii;
 use frontend\models\Vouchers;
 use backend\models\VouchersSearch;
@@ -10,6 +12,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use kartik\export\ExportMenu;
+use yii\web\UploadedFile;
 
 /**
  * VouchersController implements the CRUD actions for Vouchers model.
@@ -40,8 +43,62 @@ class VouchersController extends Controller
         $searchModel = new VouchersSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        $model = new UploadVoucherForm();
+        $vouchersWithProblems = [];
+
+        if (Yii::$app->request->isPost) {
+            $model->cvFile = UploadedFile::getInstance($model, 'cvFile');
+            $model->upload();
+            $filename = 'uploads/invoices.xls';
+            ini_set('memory_limit', '-1');
+            set_time_limit(1500);
+            $data = \moonland\phpexcel\Excel::import($filename, []); // $config is an optional
+
+            $ca_do = 0;
+            $do_ca = 0;
+            foreach ($data as $v) {
+                if ($v['FAIDRO'] == 100) {
+                    $ca_do++;
+                } else {
+                    $do_ca++;
+                }
+                $baf_ca_do = $data[sizeof($data) - 2]['FARIIM'];
+                $baf_do_ca = $data[sizeof($data) - 1]['FARIIM'];
+            }
+            $calc_baf_ca_do = $baf_ca_do / $ca_do;
+            $calc_baf_do_ca = $baf_do_ca / $do_ca;
+            foreach ($data as $v) {
+
+                $voucherToUpdate = Vouchers::find()->where(['voucher' => substr($v['FANUBI'], 2)])->andWhere(['reference' => $v['FAMOTR']])->one();
+                $voucherProblems = Vouchers::find()->where(['voucher' => substr($v['FANUBI'], 2)])->orWhere(['reference' => $v['FAMOTR']])->one();
+                if ($voucherToUpdate) {
+                    $voucherToUpdate->price = $v['FARIIM'];
+                    if ($voucherToUpdate['route'] == 'CA-DO') {
+                        $voucherToUpdate->baf = $calc_baf_ca_do;
+                    } elseif ($voucherToUpdate['route'] == 'DO-CA') {
+                        $voucherToUpdate->baf = $calc_baf_do_ca;
+                    }
+                    $voucherToUpdate->total = $v['FARIIM'] + $voucherToUpdate->baf;
+                    $voucherToUpdate->invoice = $v['FATRDT'];
+
+                    $voucherToUpdate->total = $voucherToUpdate->total + $voucherToUpdate->goods;
+
+                    if($voucherToUpdate->drivers >= 3){
+                        $voucherToUpdate->total = $voucherToUpdate->total + (($voucherToUpdate->drivers - 2) * 30);
+                    }
+                    $voucherToUpdate->save();
+
+                } else if ($voucherProblems) {
+                    $vouchersWithProblems[] = $voucherProblems;
+                }
+
+            }
+        }
+
         return $this->render('index', [
             'searchModel' => $searchModel,
+            'model' => $model,
+            'vouchersWithProblems' => $vouchersWithProblems,
             'dataProvider' => $dataProvider,
             'time' => date('H:i:s')
         ]);
@@ -114,7 +171,7 @@ class VouchersController extends Controller
         $model = $this->findModel($id);
         $voucher = Yii::$app->request->post('Vouchers');
 
-        if ($model->load($voucher,'') && $model->save()) {
+        if ($model->load($voucher, '') && $model->save()) {
             Yii::$app->getSession()->setFlash('success', 'Voucher successfully saved');
         } else {
             if (Yii::$app->request->isAjax) {
@@ -129,6 +186,20 @@ class VouchersController extends Controller
         }
     }
 
+    public function actionSettings()
+    {
+        $attributes = AttributeValue::find()
+            ->select("*")
+            ->joinWith('idAttribute')
+            ->all();
+//        var_dump($attributes);
+//die;
+        return $this->render('settings', [
+            'model' => $attributes,
+        ]);
+
+    }
+
     /**
      * Deletes an existing Vouchers model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
@@ -138,18 +209,18 @@ class VouchersController extends Controller
     public function actionDelete($id)
     {
         $voucher = $this->findModel($id);
-      $voucher['date'] = null;
-      $voucher['truck'] = null;
-      $voucher['truck_length'] = null;
-      $voucher['route'] = null;
-      $voucher['reference'] = null;
-      $voucher['price'] = null;
-      $voucher['baf'] = null;
-      $voucher['invoice'] = null;
-      $voucher['temporization'] = null;
-      $voucher['owner'] = null;
-      $voucher['total'] = null;
-      $voucher->save();
+        $voucher['date'] = null;
+        $voucher['truck'] = null;
+        $voucher['truck_length'] = null;
+        $voucher['route'] = null;
+        $voucher['reference'] = null;
+        $voucher['price'] = null;
+        $voucher['baf'] = null;
+        $voucher['invoice'] = null;
+        $voucher['temporization'] = null;
+        $voucher['owner'] = null;
+        $voucher['total'] = null;
+        $voucher->save();
 
 
         return $this->redirect(['index']);
